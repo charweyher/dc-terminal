@@ -19,9 +19,12 @@ validate, changelog, version bump).
 ## Run
 
 ```bash
-npm run ingest:overpass                       # no key required
-EIA_API_KEY=xxxx npm run ingest:eia           # or: -- --states TX,GA,TN
+npm run ingest:overpass          # no key required
+npm run ingest:eia               # reads EIA_API_KEY from .env; or: -- --states TX,GA,TN
 ```
+
+For the EIA key: `cp .env.example .env`, paste your key after `EIA_API_KEY=`.
+`.env` is gitignored — never commit the key.
 
 ## Curation workflow
 
