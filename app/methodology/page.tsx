@@ -136,12 +136,37 @@ export default function MethodologyPage() {
         </ul>
       </Panel>
 
+      <Panel title="Map layers: curated vs OSM-reported">
+        <div className="max-w-3xl space-y-2 text-[13px] text-fg-muted">
+          <p>
+            The <Link href="/map" className="underline hover:text-fg">map</Link>{" "}
+            has an optional second layer of gray dots: data centres tagged in
+            OpenStreetMap (<span className="font-mono text-[12px]">telecom=data_center</span> /{" "}
+            <span className="font-mono text-[12px]">building=data_center</span>), fetched via the
+            Overpass API. These are <strong>uncurated and unverified</strong>:
+            we have not cross-checked them against a second source, and they
+            carry no capacity, power, or water data. They are excluded from
+            every KPI and table on this site.
+          </p>
+          <p>
+            Think of them as a to-do list shown in public — each gray dot is a
+            candidate we may promote into the curated inventory after
+            verification. Points within ~1.5 km of a curated facility are
+            hidden to avoid double-plotting. Coordinates and names ©{" "}
+            <a href="https://www.openstreetmap.org/copyright" className="underline hover:text-fg">
+              OpenStreetMap contributors
+            </a>{" "}
+            (ODbL).
+          </p>
+        </div>
+      </Panel>
+
       <Panel title="Known gaps">
         <ul className="max-w-3xl list-disc space-y-1 pl-5 text-[13px] text-fg-muted">
           <li>Facility-level water figures are rare; most rows are honestly unknown — see <Link href="/water" className="underline hover:text-fg">water</Link>.</li>
           <li>BTM status is unverified for many sites; confirmed vs reported are never merged — see <Link href="/behind-the-meter" className="underline hover:text-fg">behind-the-meter</Link>.</li>
           <li>Some coordinates are city-precision geocodes, marked as such on the map and facility pages.</li>
-          <li>The sample-seeded inventory includes clearly labeled synthetic fixture rows pending replacement with filing-backed records.</li>
+          <li>The curated inventory is intentionally small relative to the ~1,500+ OSM-reported candidates; rows are only promoted once a second public source corroborates them.</li>
         </ul>
       </Panel>
     </div>

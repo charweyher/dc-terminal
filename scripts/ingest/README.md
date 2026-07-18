@@ -26,6 +26,17 @@ npm run ingest:eia               # reads EIA_API_KEY from .env; or: -- --states 
 For the EIA key: `cp .env.example .env`, paste your key after `EIA_API_KEY=`.
 `.env` is gitignored — never commit the key.
 
+## Map candidate layer
+
+`npm run build:candidates` (scripts/build-osm-candidates.mjs) converts the
+Overpass staging file into `public/osm-candidates.geojson` — the dim
+"OSM-reported (unverified)" toggle layer on `/map`. It filters to US points
+(point-in-polygon vs `public/us-states.geojson`), drops candidates within
+~1.5 km of curated rows, and writes `data/osm-candidates.meta.json` for the UI
+count. Both outputs are committed (ODbL-attributed). Re-run it after
+`ingest:overpass` or after promoting rows into `data/facilities.json`.
+Candidates never feed KPIs — display only.
+
 ## Curation workflow
 
 1. Run a script; open the staging JSON.

@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "validate:data": "node scripts/validate-data.mjs",
     "ingest:overpass": "node scripts/ingest/overpass-datacenters.mjs",
+    "build:candidates": "node scripts/build-osm-candidates.mjs",
     "ingest:eia": "node --env-file-if-exists=.env scripts/ingest/eia-generators.mjs"
   },
   "dependencies": {

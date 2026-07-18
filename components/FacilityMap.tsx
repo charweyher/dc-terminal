@@ -18,6 +18,10 @@ const STYLE_URL =
 const STATES_URL = "/us-states.geojson";
 const STATE_LABELS_URL = "/us-state-labels.geojson";
 
+// Uncurated OSM-tagged data centres (built by scripts/build-osm-candidates.mjs).
+// Rendered as a dim layer beneath curated facilities; excluded from all KPIs.
+const CANDIDATES_URL = "/osm-candidates.geojson";
+
 // Continental US framing. Alaska/Hawaii stay reachable by panning.
 const CONUS_BOUNDS: [[number, number], [number, number]] = [
   [-125.5, 24.2],
@@ -49,10 +53,12 @@ export default function FacilityMap({
   points,
   heightClass = "h-[560px]",
   interactive = true,
+  showCandidates = false,
 }: {
   points: MapPoint[];
   heightClass?: string;
   interactive?: boolean;
+  showCandidates?: boolean;
 }) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,6 +66,8 @@ export default function FacilityMap({
   const loadedRef = useRef(false);
   const pointsRef = useRef(points);
   pointsRef.current = points;
+  const showCandidatesRef = useRef(showCandidates);
+  showCandidatesRef.current = showCandidates;
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -142,6 +150,23 @@ export default function FacilityMap({
         },
       });
 
+      // Unverified OSM candidates — drawn beneath curated facilities.
+      map.addSource("osm-candidates", { type: "geojson", data: CANDIDATES_URL });
+      map.addLayer({
+        id: "candidate-circles",
+        type: "circle",
+        source: "osm-candidates",
+        layout: {
+          visibility: showCandidatesRef.current ? "visible" : "none",
+        },
+        paint: {
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 2.2, 8, 5],
+          "circle-color": "#64748b",
+          "circle-opacity": 0.65,
+          "circle-stroke-width": 0,
+        },
+      });
+
       map.addSource("facilities", {
         type: "geojson",
         data: toGeoJson(pointsRef.current),
@@ -210,6 +235,37 @@ export default function FacilityMap({
           map.getCanvas().style.cursor = "";
         });
 
+        map.on("click", "candidate-circles", (e) => {
+          // Curated facilities win when the two overlap.
+          if (
+            map.queryRenderedFeatures(e.point, { layers: ["facility-circles"] })
+              .length > 0
+          ) {
+            return;
+          }
+          const p = (e.features?.[0]?.properties ?? {}) as Record<string, string>;
+          const name =
+            p.name && p.name !== "null" ? p.name : "Unnamed data center";
+          const operator =
+            p.operator && p.operator !== "null" ? ` · ${p.operator}` : "";
+          new maplibregl.Popup({ closeButton: false, maxWidth: "260px" })
+            .setLngLat(e.lngLat)
+            .setHTML(
+              `<div style="font-family:var(--mono);font-size:12px;background:#0e1218;color:#e6edf5;padding:8px 10px;border:1px solid #243041">
+                <span style="font-weight:600">${name}</span>
+                <div style="color:#8b9bb0;margin-top:4px">${p.state}${operator}</div>
+                <div style="color:#5c6b7e;margin-top:2px">OSM-reported · unverified · not in KPIs</div>
+              </div>`
+            )
+            .addTo(map);
+        });
+        map.on("mouseenter", "candidate-circles", () => {
+          map.getCanvas().style.cursor = "pointer";
+        });
+        map.on("mouseleave", "candidate-circles", () => {
+          map.getCanvas().style.cursor = "";
+        });
+
         // State drill-down: hover highlight + click (when not on a facility).
         map.on("mousemove", "states-fill", (e) => {
           const code = e.features?.[0]?.id as string | undefined;
@@ -239,7 +295,7 @@ export default function FacilityMap({
         });
         map.on("click", "states-fill", (e) => {
           const onFacility = map.queryRenderedFeatures(e.point, {
-            layers: ["facility-circles"],
+            layers: ["facility-circles", "candidate-circles"],
           });
           if (onFacility.length > 0) return;
           const code = e.features?.[0]?.id as string | undefined;
@@ -263,6 +319,16 @@ export default function FacilityMap({
       | undefined;
     source?.setData(toGeoJson(points));
   }, [points]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !loadedRef.current || !map.getLayer("candidate-circles")) return;
+    map.setLayoutProperty(
+      "candidate-circles",
+      "visibility",
+      showCandidates ? "visible" : "none"
+    );
+  }, [showCandidates]);
 
   return <div ref={containerRef} className={`w-full ${heightClass}`} />;
 }
