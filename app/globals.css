@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --bg-0: #0a0c0f;       /* page */
+  --bg-1: #0e1218;       /* panel */
+  --bg-2: #141a22;       /* elevated panel / hover */
+  --border: #243041;     /* hairline */
+  --border-strong: #3a4d63;
+
+  --text: #e6edf5;
+  --text-muted: #8b9bb0;
+  --text-dim: #5c6b7e;
+
+  --accent-operating: #3b82f6; /* cool blue */
+  --accent-planned: #f59e0b;   /* amber */
+  --accent-btm: #22c55e;       /* green */
+  --accent-danger: #ef4444;
+  --accent-water: #38bdf8;     /* sky */
+
+  --mono: var(--font-plex-mono), "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  --sans: var(--font-plex-sans), "Source Sans 3", "Helvetica Neue", sans-serif;
+}
+
+@theme inline {
+  --color-bg-0: var(--bg-0);
+  --color-bg-1: var(--bg-1);
+  --color-bg-2: var(--bg-2);
+  --color-hairline: var(--border);
+  --color-hairline-strong: var(--border-strong);
+  --color-fg: var(--text);
+  --color-fg-muted: var(--text-muted);
+  --color-fg-dim: var(--text-dim);
+  --color-operating: var(--accent-operating);
+  --color-planned: var(--accent-planned);
+  --color-btm: var(--accent-btm);
+  --color-danger: var(--accent-danger);
+  --color-water: var(--accent-water);
+  --font-mono: var(--mono);
+  --font-sans: var(--sans);
+}
+
+html {
+  background: var(--bg-0);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 1px solid var(--border-strong);
+  outline-offset: 1px;
+}
+
+/* Subtle first-paint fade for panel content (design system: <300ms) */
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel-in {
+  animation: panel-in 240ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel-in {
+    animation: none;
+  }
+}

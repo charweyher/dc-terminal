@@ -7,12 +7,12 @@
       "publisher": "U.S. Energy Information Administration",
       "url": "https://www.eia.gov/electricity/data/eia860/",
       "accessed_at": "2026-07-18",
-      "license_notes": "U.S. government public data. Use for generator/plant attributes ≥1 MW; not a data-center registry.",
+      "license_notes": "U.S. government public data. Use for generator/plant attributes \u22651 MW; not a data-center registry.",
       "kind": "government"
     },
     {
       "id": "pudl-eia860",
-      "title": "PUDL documentation — EIA Form 860",
+      "title": "PUDL documentation \u2014 EIA Form 860",
       "publisher": "Catalyst Cooperative",
       "url": "https://docs.catalyst.coop/pudl/en/stable/data_sources/eia860.html",
       "accessed_at": "2026-07-18",
@@ -93,7 +93,7 @@
     },
     {
       "id": "census-state-boundaries",
-      "title": "Cartographic Boundary Files — States",
+      "title": "Cartographic Boundary Files \u2014 States",
       "publisher": "U.S. Census Bureau",
       "url": "https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html",
       "accessed_at": "2026-07-18",
@@ -106,7 +106,7 @@
       "publisher": "DC Terminal",
       "url": null,
       "accessed_at": "2026-07-18",
-      "license_notes": "Used only for UI/schema development. Several MW/coords are estimated or reported placeholders — replace before publishing analytics.",
+      "license_notes": "Used only for UI/schema development. Several MW/coords are estimated or reported placeholders \u2014 replace before publishing analytics.",
       "kind": "other"
     },
     {
@@ -120,12 +120,30 @@
     },
     {
       "id": "most-policy-dc-water",
-      "title": "Data Center Water Use — science note",
+      "title": "Data Center Water Use \u2014 science note",
       "publisher": "MOST Policy Initiative",
       "url": "https://mostpolicyinitiative.org/science-note/data-center-water-use/",
       "accessed_at": "2026-07-18",
       "license_notes": "Secondary summary of EPA/LBNL figures for context panels.",
       "kind": "ngo"
+    },
+    {
+      "id": "meta-hyperion-richland-press",
+      "title": "Meta Hyperion data center \u2014 Richland Parish, Louisiana (Holly Ridge / Franklin Farm mega-site) public announcements and press coverage",
+      "publisher": "Meta / Louisiana Economic Development / press",
+      "url": "https://about.fb.com/news/2024/12/meta-louisiana-data-center/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Public corporate announcement and press reporting; used for site location only.",
+      "kind": "news"
+    },
+    {
+      "id": "osm-overpass-datacenters",
+      "title": "OpenStreetMap data-centre features (telecom=data_center / building=data_center) via Overpass API",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://overpass-api.de/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "ODbL \u2014 \u00a9 OpenStreetMap contributors. Used for candidate discovery and coordinates; every promoted row is cross-checked against a second public source.",
+      "kind": "other"
     }
   ]
 }

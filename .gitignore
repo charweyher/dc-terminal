@@ -9,12 +9,17 @@ dist/
 .env.*
 !.env.example
 
-# Large raw energy datasets
+# Large raw energy datasets + API staging output (curate, don't commit)
+data/raw/**/*.staging.json
 data/raw/**/*.zip
 data/raw/**/*.xlsx
 data/raw/**/*.xls
 data/raw/**/*.csv
 !data/raw/README.md
 
-# Local Claude / editor
+# Local Claude / editor / browser-verification artifacts
 .claude/settings.local.json
+.playwright-mcp/
+*.png
+!app/**/*.png
+!public/**/*.png

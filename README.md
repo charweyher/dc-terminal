@@ -1,103 +1,95 @@
 # DC Terminal
 
-Public-data terminal for **US data centers**: operating vs planned counts, behind-the-meter / self-powered facilities, and water statistics where public sources allow — with honest coverage and confidence labels.
+Public-data terminal for **US data centers**: operating vs planned counts, behind-the-meter / self-powered facilities, and water statistics where public sources allow — with honest coverage and confidence labels on every sensitive number.
 
-This repository currently contains the **Claude Code prompt pack** (specs, schema, sample data, phased prompts). The Next.js app is built by running the phases below inside this folder.
+Built with Next.js (App Router) + TypeScript + Tailwind + MapLibre GL. The full MVP (all routes, map, tables, credibility pages) is implemented; the repo also contains the spec docs and phased prompts it was built from.
 
-**UX references:** [Cleanview US map](https://cleanview.co/data-centers/us) for layout clarity; Bloomberg-like density for chrome. Do **not** scrape Cleanview’s database.
+**UX references:** [Cleanview US map](https://cleanview.co/data-centers/us) for layout clarity; Bloomberg-like density for chrome. Do **not** scrape Cleanview's database.
 
 ---
 
-## Quick start (after Phase 1 exists)
+## Run it
 
 ```bash
-cd "/Users/charweyher/Desktop/Data Centers Website"
 npm install
-npm run dev
+npm run dev            # http://localhost:3000
 ```
 
-Useful scripts (added during Phase 2):
+Other scripts:
 
 ```bash
-npm run validate:data
-npm run build
+npm run validate:data  # schema checks on data/facilities[.sample].json — run after any data edit
+npm run build          # production build (must pass before shipping/committing a phase)
+npm run start          # serve the production build
+npm run lint           # eslint
+npm run ingest:overpass  # pull US data-center candidates from OpenStreetMap → data/raw/ staging
+npm run ingest:eia       # (needs free EIA_API_KEY) BTM generator candidates → data/raw/ staging
 ```
 
-Until Phase 1 is complete, there is no `package.json` yet — start Claude Code with Phase 1 first.
+Ingest scripts stage candidates for **human curation** — they never write `data/facilities.json` directly. See [`scripts/ingest/README.md`](scripts/ingest/README.md).
 
----
+No API keys are required. The map uses CARTO's free "Dark Matter" basemap (style URL documented in `components/FacilityMap.tsx`) with a US-states layer (Census-derived GeoJSON in `public/us-states.geojson`) drawn on top: crisp state borders + code labels at national zoom, hover highlight, and click-through to `/states/[code]`. Attribution to © CARTO / © OpenStreetMap contributors is rendered by the map control and must stay visible. For high-traffic production use, plan to self-host tiles or license a provider.
 
-## Run with Claude Code
+## Routes
 
-1. Open this directory as the project root in Claude Code / your terminal.
-2. Tell Claude to read `CLAUDE.md`.
-3. Paste this session starter, then the phase file:
+| Route | Purpose |
+|-------|---------|
+| `/` | KPI strip (with coverage sublines), map preview, largest operating/planned tables |
+| `/map` | Full map + status / BTM / water / state filters |
+| `/facilities` | Dense sortable, searchable, filterable table |
+| `/facilities/[id]` | Full record with per-field confidence badges + sources |
+| `/states/[code]` | State rollups (invalid USPS codes → 404) |
+| `/behind-the-meter` | BTM definition, confirmed vs reported ranked lists, coverage |
+| `/water` | Known-water facilities, coverage, labeled external estimates |
+| `/methodology` | Confidence model, pipeline, source registry, non-completeness disclaimer |
+
+## Code map
 
 ```text
-You are implementing DC Terminal in this repo. Read CLAUDE.md first.
-Follow the phase prompt I paste next exactly. Do not skip ahead to later phases.
-After you finish, summarize what you built and how to verify it.
-```
-
-4. Run phases **in order**:
-
-| Phase | File |
-|-------|------|
-| 1 Scaffold | [`prompts/phase-01-scaffold.md`](prompts/phase-01-scaffold.md) |
-| 2 Data layer | [`prompts/phase-02-data-layer.md`](prompts/phase-02-data-layer.md) |
-| 3 Map + home | [`prompts/phase-03-map-home.md`](prompts/phase-03-map-home.md) |
-| 4 Table + states | [`prompts/phase-04-table-states.md`](prompts/phase-04-table-states.md) |
-| 5 BTM + water + methodology | [`prompts/phase-05-btm-water-methodology.md`](prompts/phase-05-btm-water-methodology.md) |
-| 6 Polish | [`prompts/phase-06-polish.md`](prompts/phase-06-polish.md) |
-
-Overview: [`docs/BUILD_PHASES.md`](docs/BUILD_PHASES.md).
-
----
-
-## Repo map
-
-```text
-CLAUDE.md                 Master brief for Claude Code
-README.md                 This file
-docs/
-  PRODUCT_SPEC.md         Pages & acceptance criteria
-  DATA_SCHEMA.md          Types + confidence model
-  DATA_SOURCES.md         Allowed public sources
-  DATA_PIPELINE.md        Ingest / validate / refresh
-  DESIGN_SYSTEM.md        Terminal visual rules
-  BUILD_PHASES.md         Phase index
-prompts/                  Copy-paste phase prompts
-data/
-  sources.json            Source registry
-  facilities.sample.json  20-facility schema fixture
-  aggregates.water.json   National water context (external estimates)
-  meta.json               Dataset version metadata
-  raw/README.md           EIA download hygiene
-CHANGELOG_DATA.md         Inventory change log
+app/                    Routes (App Router, server components load data)
+components/             Terminal UI: Panel, KpiCell, FacilityMap, FacilityTable,
+                        MapExplorer, ConfidenceBadge, ConfidentField, FilterSelect…
+lib/
+  types.ts              Schema types (mirror docs/DATA_SCHEMA.md)
+  data.ts               Cached fs loaders for data/*.json (server-side)
+  kpis.ts               computeKpis — all headline numbers derive from here
+  mapPoints.ts          Facility → map point flattening
+  tableRows.ts          Facility → table row flattening
+  useFacilityFilters.ts Shared client filter hook (map + table)
+  states.ts             USPS codes + names
+scripts/validate-data.mjs  Schema validator (npm run validate:data)
+data/                   Versioned inventory + sources + water context
+docs/                   Product spec, schema, sources, pipeline, design system
+prompts/                The phased Claude Code prompts this app was built from
 ```
 
 ---
 
-## Product focus
+## Continuing with Claude Code
 
-1. **How many** US data centers in the curated set — operating vs planned (and under construction).
-2. **Behind the meter** — count and MW with `confirmed` vs `reported` confidence.
-3. **Water** — facility-level when sourced; national literature estimates only as labeled context.
+Open this directory as the project root; Claude reads `CLAUDE.md` automatically. The six build phases in `prompts/` are **all complete**. For further work:
 
-Figures reflect this repo’s public curated inventory, **not** a complete national census. Commercial trackers may list far more projects.
+- Paste a follow-up task directly, or write a new prompt file in `prompts/` following the same style.
+- Keep the hard rules in `CLAUDE.md` (no scraping proprietary inventories, no invented numbers, coverage disclosure on every KPI).
+- After any change: `npm run validate:data && npm run build` must pass.
 
----
-
-## Adding a facility (after the app exists)
-
-1. Follow [`docs/DATA_PIPELINE.md`](docs/DATA_PIPELINE.md) and [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
-2. Add sources to `data/sources.json`.
-3. Append to `data/facilities.json` using the schema in [`docs/DATA_SCHEMA.md`](docs/DATA_SCHEMA.md).
-4. Run `npm run validate:data`.
-5. Update `CHANGELOG_DATA.md` and `data/meta.json`.
+Phase history: [`docs/BUILD_PHASES.md`](docs/BUILD_PHASES.md) · prompts in [`prompts/`](prompts/).
 
 ---
 
-## License / data honesty
+## Adding a facility
 
-Sample rows include illustrative and synthetic entries for UI testing (see facility `notes`). Replace or remove synthetic rows before publishing analytics. Respect upstream licenses when citing government, corporate, and academic sources.
+1. Follow [`docs/DATA_PIPELINE.md`](docs/DATA_PIPELINE.md) and use only sources allowed by [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
+2. Register new sources in `data/sources.json`.
+3. Append the facility to `data/facilities.json` per [`docs/DATA_SCHEMA.md`](docs/DATA_SCHEMA.md) — wrap capacity, BTM, water, and coordinates in the confidence model; unknown means `null` + `"unknown"`.
+4. `npm run validate:data` (unique ids, USPS states, coordinate bounds, unknown⇒null, source references).
+5. Append to `CHANGELOG_DATA.md` and bump `data/meta.json`.
+6. Smoke-check the KPI strip and map.
+
+`data/facilities.sample.json` stays as the schema fixture — edit the curated `data/facilities.json`.
+
+---
+
+## Dataset scope disclaimer
+
+Figures reflect this repo's public curated inventory, **not** a complete national census — commercial trackers list far more projects, and the UI says so wherever totals appear. Sample rows include clearly labeled illustrative/synthetic entries for UI testing (see facility `notes`); replace or remove them before publishing analytics. Respect upstream licenses when citing government, corporate, and academic sources.

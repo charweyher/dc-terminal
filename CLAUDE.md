@@ -2,7 +2,7 @@
 
 You are building **DC Terminal**: a US data-center intelligence website with a Cleanview-inspired information architecture and a Bloomberg-terminal visual density.
 
-This repository currently contains the **prompt pack, data schema, sample data, and specs**. Your job is to implement the application in phases (see `docs/BUILD_PHASES.md` and `prompts/`).
+This repository contains the **implemented Next.js application** plus the prompt pack, data schema, sample data, and specs it was built from. All six build phases (`docs/BUILD_PHASES.md`, `prompts/`) are complete; ongoing work means expanding the curated dataset and refining features under the same rules. App code lives in `app/`, `components/`, `lib/`, and `scripts/` (types in `lib/types.ts`, loaders in `lib/data.ts`, KPIs in `lib/kpis.ts`).
 
 ---
 

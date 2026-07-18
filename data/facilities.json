@@ -1,0 +1,2447 @@
+{
+  "version": "0.1.0",
+  "generated_at": "2026-07-18T14:00:00Z",
+  "description": "Sample fixture for DC Terminal schema/UI. Mix of illustrative public-style rows. Replace estimated/reported placeholders with filing-backed values before publishing analytics. Not a national census.",
+  "facilities": [
+    {
+      "id": "xai-colossus-1-tn",
+      "name": "xAI Colossus 1",
+      "aliases": [
+        "Colossus",
+        "Memphis Colossus"
+      ],
+      "operator": "xAI",
+      "developer": "xAI",
+      "facility_type": "ai_campus",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 35.0456,
+          "confidence": "reported",
+          "source_ids": [
+            "xai-colossus-press",
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-01-15"
+        },
+        "lng": {
+          "value": -89.9711,
+          "confidence": "reported",
+          "source_ids": [
+            "xai-colossus-press"
+          ],
+          "as_of": "2026-01-15"
+        },
+        "state": "TN",
+        "county": "Shelby",
+        "city": "Memphis",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 300,
+          "confidence": "reported",
+          "source_ids": [
+            "xai-colossus-press",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2025-12-01"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2025,
+          "confidence": "reported",
+          "source_ids": [
+            "xai-colossus-press"
+          ],
+          "as_of": "2025-12-01"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "hybrid",
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-01-15"
+        },
+        "behind_the_meter": {
+          "value": true,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026",
+            "xai-colossus-press"
+          ],
+          "as_of": "2026-01-15"
+        },
+        "onsite_generation_mw": {
+          "value": 1500,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-01-15"
+        },
+        "fuel_types": [
+          "natural_gas"
+        ]
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "xai-colossus-press",
+        "distilled-btm-2026",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Illustrative BTM sample. On-site generation MW reflects public reporting of mobile/onsite turbines serving the campus; corroborate with permits/EIA before elevating to confirmed."
+    },
+    {
+      "id": "digital-realty-iad39-va",
+      "name": "Digital Realty IAD39",
+      "aliases": [
+        "IAD39"
+      ],
+      "operator": "Digital Realty",
+      "developer": "Digital Realty",
+      "facility_type": "colocation",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 39.0438,
+          "confidence": "estimated",
+          "source_ids": [
+            "digital-realty-iad-disclosures",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -77.4874,
+          "confidence": "estimated",
+          "source_ids": [
+            "digital-realty-iad-disclosures",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "VA",
+        "county": "Loudoun",
+        "city": "Ashburn",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 243,
+          "confidence": "reported",
+          "source_ids": [
+            "digital-realty-iad-disclosures",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2019,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "digital-realty-iad-disclosures",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Northern Virginia colocation sample; coordinates city-precision."
+    },
+    {
+      "id": "msft-fairwater-atl-b2-ga",
+      "name": "Microsoft Fairwater Atlanta \u2014 Building 2",
+      "aliases": [
+        "Fairwater Atlanta B2"
+      ],
+      "operator": "Microsoft",
+      "developer": "QTS",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 33.4487,
+          "confidence": "estimated",
+          "source_ids": [
+            "microsoft-fairwater-announcements",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -84.4952,
+          "confidence": "estimated",
+          "source_ids": [
+            "microsoft-fairwater-announcements",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "GA",
+        "county": "Fayette",
+        "city": null,
+        "precision": "county"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 260,
+          "confidence": "reported",
+          "source_ids": [
+            "microsoft-fairwater-announcements",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2025,
+          "confidence": "reported",
+          "source_ids": [
+            "microsoft-fairwater-announcements"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "liquid",
+          "confidence": "reported",
+          "source_ids": [
+            "microsoft-fairwater-announcements"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "source_ids": [
+        "microsoft-fairwater-announcements",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Cooling type reported from public AI campus coverage; water volumes unknown."
+    },
+    {
+      "id": "msft-fairwater-atl-b4-ga",
+      "name": "Microsoft Fairwater Atlanta \u2014 Building 4",
+      "aliases": [
+        "Fairwater Atlanta B4"
+      ],
+      "operator": "Microsoft",
+      "developer": "QTS",
+      "facility_type": "hyperscale",
+      "status": "planned",
+      "location": {
+        "lat": {
+          "value": 33.45,
+          "confidence": "estimated",
+          "source_ids": [
+            "microsoft-fairwater-announcements",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -84.5,
+          "confidence": "estimated",
+          "source_ids": [
+            "microsoft-fairwater-announcements",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "GA",
+        "county": "Fayette",
+        "city": null,
+        "precision": "county"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 268,
+          "confidence": "reported",
+          "source_ids": [
+            "microsoft-fairwater-announcements",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": 2026,
+          "confidence": "reported",
+          "source_ids": [
+            "microsoft-fairwater-announcements"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "microsoft-fairwater-announcements",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": null
+    },
+    {
+      "id": "iren-childress-tx",
+      "name": "IREN Childress",
+      "aliases": [
+        "Childress Bitcoin mining"
+      ],
+      "operator": "IREN",
+      "developer": "IREN",
+      "facility_type": "crypto_mining",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 34.4264,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -100.204,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Childress",
+        "city": "Childress",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 750,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2023,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "air",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Crypto mining included with facility_type filter; verify MW against company filings when curating."
+    },
+    {
+      "id": "riot-rockdale-tx",
+      "name": "Riot Platforms Rockdale",
+      "aliases": [
+        "Rockdale"
+      ],
+      "operator": "Riot Platforms",
+      "developer": "Riot Platforms",
+      "facility_type": "crypto_mining",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 30.655,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -97.0,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Milam",
+        "city": "Rockdale",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 700,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2020,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": null
+    },
+    {
+      "id": "google-council-bluffs-ia",
+      "name": "Google Council Bluffs",
+      "aliases": [
+        "Council Bluffs data center"
+      ],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 41.2619,
+          "confidence": "estimated",
+          "source_ids": [
+            "google-env-report-2025",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -95.8608,
+          "confidence": "estimated",
+          "source_ids": [
+            "google-env-report-2025",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "IA",
+        "county": "Pottawattamie",
+        "city": "Council Bluffs",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": 3.9,
+          "confidence": "reported",
+          "source_ids": [
+            "google-env-report-2025",
+            "most-policy-dc-water"
+          ],
+          "as_of": "2025-01-01"
+        },
+        "consumption_mgd": {
+          "value": 2.8,
+          "confidence": "reported",
+          "source_ids": [
+            "google-env-report-2025",
+            "most-policy-dc-water"
+          ],
+          "as_of": "2025-01-01"
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "evaporative",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "source_ids": [
+        "google-env-report-2025",
+        "most-policy-dc-water",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Water figures from public summaries of Google site disclosure (avg MGD). Capacity MW intentionally unknown to demonstrate coverage honesty."
+    },
+    {
+      "id": "meta-hyperion-la",
+      "name": "Meta Hyperion \u2014 Expansion (Phase 2)",
+      "aliases": [
+        "Hyperion"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "planned",
+      "location": {
+        "lat": {
+          "value": 32.351,
+          "confidence": "reported",
+          "source_ids": [
+            "meta-hyperion-richland-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -91.674,
+          "confidence": "reported",
+          "source_ids": [
+            "meta-hyperion-richland-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "LA",
+        "county": "Richland",
+        "city": "Holly Ridge",
+        "precision": "site"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 5238,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": 2031,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Large planned capacity sample; BTM unknown."
+    },
+    {
+      "id": "fermi-matador-tx",
+      "name": "Fermi America \u2014 Project Matador",
+      "aliases": [
+        "Fermi Matador",
+        "Project Matador"
+      ],
+      "operator": "Fermi America",
+      "developer": "Fermi America",
+      "facility_type": "ai_campus",
+      "status": "planned",
+      "location": {
+        "lat": {
+          "value": 35.6,
+          "confidence": "estimated",
+          "source_ids": [
+            "distilled-btm-2026",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -101.4,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Carson",
+        "city": null,
+        "precision": "county"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 6000,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture",
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": 2027,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "behind_the_meter",
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": true,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": 6000,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "fuel_types": [
+          "natural_gas"
+        ]
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "distilled-btm-2026",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Planned gas-backed campus often discussed as BTM; treat as reported until permits confirm."
+    },
+    {
+      "id": "edgecore-mesa-ph03-az",
+      "name": "EdgeCore Mesa PH03",
+      "aliases": [
+        "EdgeCore Mesa"
+      ],
+      "operator": "EdgeCore",
+      "developer": "EdgeCore",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 33.4152,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -111.8315,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "AZ",
+        "county": "Maricopa",
+        "city": "Mesa",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 450,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2025,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Arizona water stress context relevant for future curation."
+    },
+    {
+      "id": "stream-phoenix-az",
+      "name": "Stream Data Center Phoenix I\u2013VII",
+      "aliases": [
+        "Stream Phoenix"
+      ],
+      "operator": "Stream Data Centers",
+      "developer": "Stream Data Centers",
+      "facility_type": "colocation",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 33.4484,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -112.074,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "AZ",
+        "county": "Maricopa",
+        "city": "Phoenix",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 280,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2024,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": null
+    },
+    {
+      "id": "hut8-king-mountain-tx",
+      "name": "Hut 8 King Mountain",
+      "aliases": [],
+      "operator": "Hut 8",
+      "developer": "Hut 8",
+      "facility_type": "crypto_mining",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 31.23,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -102.0,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Upton",
+        "city": null,
+        "precision": "county"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 280,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2022,
+          "confidence": "reported",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": null
+    },
+    {
+      "id": "nebius-nj-btm-planned",
+      "name": "Nebius New Jersey \u2014 onsite generation campus",
+      "aliases": [
+        "Microsoft Nebius NJ"
+      ],
+      "operator": "Nebius",
+      "developer": "Nebius",
+      "facility_type": "ai_campus",
+      "status": "under_construction",
+      "location": {
+        "lat": {
+          "value": 40.58,
+          "confidence": "estimated",
+          "source_ids": [
+            "distilled-btm-2026",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -74.45,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NJ",
+        "county": null,
+        "city": null,
+        "precision": "state"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 400,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "behind_the_meter",
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": true,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": 400,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "fuel_types": [
+          "natural_gas"
+        ]
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "distilled-btm-2026",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Air permit challenges reported in secondary coverage; location precision coarse on purpose."
+    },
+    {
+      "id": "equinix-dc12-va",
+      "name": "Equinix DC12 (sample)",
+      "aliases": [
+        "DC12"
+      ],
+      "operator": "Equinix",
+      "developer": "Equinix",
+      "facility_type": "colocation",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 38.95,
+          "confidence": "estimated",
+          "source_ids": [
+            "equinix-sustainability-2025",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -77.45,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "VA",
+        "county": "Loudoun",
+        "city": "Ashburn",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 40,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": 0.15,
+          "confidence": "estimated",
+          "source_ids": [
+            "equinix-sustainability-2025",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "consumption_mgd": {
+          "value": 0.12,
+          "confidence": "estimated",
+          "source_ids": [
+            "equinix-sustainability-2025",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "hybrid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "source_ids": [
+        "equinix-sustainability-2025",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Water volumes are SCHEMA DEMOS only (not Equinix-published site figures). Replace with real disclosures or set to unknown before any public launch."
+    },
+    {
+      "id": "aws-us-east-oha-oh",
+      "name": "AWS Ohio region campus (sample aggregate)",
+      "aliases": [
+        "us-east-2 sample"
+      ],
+      "operator": "Amazon Web Services",
+      "developer": "Amazon",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 40.1,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -83.0,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OH",
+        "county": null,
+        "city": null,
+        "precision": "state"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Placeholder regional campus row demonstrating unknown capacity + coarse location."
+    },
+    {
+      "id": "stargate-nm-planned",
+      "name": "Stargate New Mexico (sample)",
+      "aliases": [
+        "OpenAI Stargate NM"
+      ],
+      "operator": null,
+      "developer": null,
+      "facility_type": "ai_campus",
+      "status": "planned",
+      "location": {
+        "lat": {
+          "value": 32.3,
+          "confidence": "estimated",
+          "source_ids": [
+            "distilled-btm-2026",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -106.8,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NM",
+        "county": null,
+        "city": null,
+        "precision": "state"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 2450,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": 2027,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "behind_the_meter",
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": true,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": 2450,
+          "confidence": "reported",
+          "source_ids": [
+            "distilled-btm-2026"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "fuel_types": [
+          "natural_gas"
+        ]
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "distilled-btm-2026",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Pipeline/permit uncertainty noted in secondary reporting; keep status planned until construction evidence."
+    },
+    {
+      "id": "qts-atlanta-campus-ga",
+      "name": "QTS Atlanta metro campus (sample)",
+      "aliases": [],
+      "operator": "QTS",
+      "developer": "QTS",
+      "facility_type": "hyperscale",
+      "status": "under_construction",
+      "location": {
+        "lat": {
+          "value": 33.47,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -84.52,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "GA",
+        "county": "Fayette",
+        "city": null,
+        "precision": "county"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 120,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": 2027,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Under-construction sample distinct from named Fairwater buildings."
+    },
+    {
+      "id": "cancelled-demo-or",
+      "name": "Demo Cancelled Project (OR)",
+      "aliases": [],
+      "operator": null,
+      "developer": null,
+      "facility_type": "other",
+      "status": "cancelled",
+      "location": {
+        "lat": {
+          "value": 45.5,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -122.7,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OR",
+        "county": "Multnomah",
+        "city": "Portland",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 50,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Synthetic cancelled row to test KPI exclusion rules."
+    },
+    {
+      "id": "vantage-quincy-wa",
+      "name": "Vantage Quincy (sample)",
+      "aliases": [],
+      "operator": "Vantage Data Centers",
+      "developer": "Vantage Data Centers",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 47.23,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -119.85,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "WA",
+        "county": "Grant",
+        "city": "Quincy",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 100,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "evaporative",
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "source_ids": [
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": null
+    },
+    {
+      "id": "confirmed-btm-demo-ok",
+      "name": "Demo Confirmed BTM Campus (OK)",
+      "aliases": [
+        "Schema confirmed BTM"
+      ],
+      "operator": "Demo Operator",
+      "developer": "Demo Developer",
+      "facility_type": "ai_campus",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 35.5,
+          "confidence": "confirmed",
+          "source_ids": [
+            "eia-860-overview",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -97.5,
+          "confidence": "confirmed",
+          "source_ids": [
+            "eia-860-overview",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OK",
+        "county": "Oklahoma",
+        "city": null,
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 200,
+          "confidence": "confirmed",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": 180,
+          "confidence": "confirmed",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "year_operational": {
+          "value": 2024,
+          "confidence": "confirmed",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "behind_the_meter",
+          "confidence": "confirmed",
+          "source_ids": [
+            "eia-860-overview",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": true,
+          "confidence": "confirmed",
+          "source_ids": [
+            "eia-860-overview",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": 220,
+          "confidence": "confirmed",
+          "source_ids": [
+            "eia-860-overview",
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "fuel_types": [
+          "natural_gas",
+          "solar"
+        ]
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": 0.8,
+          "confidence": "confirmed",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "consumption_mgd": {
+          "value": 0.5,
+          "confidence": "confirmed",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "wue_l_per_kwh": {
+          "value": 1.8,
+          "confidence": "estimated",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "cooling_type": {
+          "value": "hybrid",
+          "confidence": "confirmed",
+          "source_ids": [
+            "sample-schema-fixture"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "source_ids": [
+        "eia-860-overview",
+        "sample-schema-fixture"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "SYNTHETIC confirmed row to exercise CONF badges and BTM confirmed KPIs. Not a real campus \u2014 remove or replace before public analytics."
+    }
+  ]
+}
