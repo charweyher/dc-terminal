@@ -1,4 +1,4 @@
-// Validates data/facilities[.sample].json against docs/DATA_SCHEMA.md rules.
+// Validates data/facilities.json against docs/DATA_SCHEMA.md rules.
 // Exits non-zero on errors; inconsistent BTM/interconnect combos are warnings.
 import fs from "node:fs";
 import path from "node:path";
@@ -130,11 +130,7 @@ function validateFile(file) {
   console.log(`${file}: ${facilities.length} facilities`, counts);
 }
 
-const files = ["facilities.sample.json"];
-if (fs.existsSync(path.join(DATA_DIR, "facilities.json"))) {
-  files.push("facilities.json");
-}
-for (const file of files) validateFile(file);
+validateFile("facilities.json");
 
 for (const w of warnings) console.warn(`WARN  ${w}`);
 for (const e of errors) console.error(`ERROR ${e}`);

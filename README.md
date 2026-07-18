@@ -18,7 +18,7 @@ npm run dev            # http://localhost:3000
 Other scripts:
 
 ```bash
-npm run validate:data  # schema checks on data/facilities[.sample].json — run after any data edit
+npm run validate:data  # schema checks on data/facilities.json — run after any data edit
 npm run build          # production build (must pass before shipping/committing a phase)
 npm run start          # serve the production build
 npm run lint           # eslint
@@ -86,7 +86,7 @@ Phase history: [`docs/BUILD_PHASES.md`](docs/BUILD_PHASES.md) · prompts in [`pr
 5. Append to `CHANGELOG_DATA.md` and bump `data/meta.json`.
 6. Smoke-check the KPI strip and map.
 
-`data/facilities.sample.json` stays as the schema fixture — edit the curated `data/facilities.json`.
+All data lives in the curated `data/facilities.json` — every row is real and sourced (no sample/fixture data).
 
 ---
 

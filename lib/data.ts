@@ -18,13 +18,10 @@ let datasetCache: FacilityDataset | null = null;
 let sourcesCache: SourceRegistry | null = null;
 let waterContextCache: WaterAggregateContext | null = null;
 
-/** Curated inventory; falls back to the schema fixture if it doesn't exist. */
+/** Curated inventory — the only dataset; every row is real and sourced. */
 export function loadDataset(): FacilityDataset {
   if (!datasetCache) {
-    const curated = path.join(DATA_DIR, "facilities.json");
-    datasetCache = readJson<FacilityDataset>(
-      fs.existsSync(curated) ? "facilities.json" : "facilities.sample.json"
-    );
+    datasetCache = readJson<FacilityDataset>("facilities.json");
   }
   return datasetCache;
 }

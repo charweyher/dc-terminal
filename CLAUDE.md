@@ -51,7 +51,7 @@ UX north star: [Cleanview US Data Centers](https://cleanview.co/data-centers/us)
 | Data (MVP) | Versioned JSON under `data/` + typed loaders; aggregates in TypeScript |
 | Hosting | Vercel-ready |
 
-Start from sample data: `data/facilities.sample.json`. Expand into `data/facilities.json` as the curated inventory grows. Keep `facilities.sample.json` as the schema fixture.
+All data lives in `data/facilities.json` — the curated inventory. The sample fixture has been removed at the owner's request: no hypothetical/sample rows anywhere in the repo. Every row must be real and sourced.
 
 ---
 
@@ -113,7 +113,7 @@ Execute **one phase at a time** using the matching file in `prompts/`. Do not sk
 
 ## Definition of done (product MVP)
 
-- [ ] All routes above render with sample (then curated) data  
+- [ ] All routes above render with curated data  
 - [ ] Map shows operating vs planned; filters work  
 - [ ] KPIs never claim completeness they don’t have  
 - [ ] BTM and water pages explain gaps  

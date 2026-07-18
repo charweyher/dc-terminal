@@ -133,7 +133,7 @@ export interface FacilityDataset {
 ```
 
 Store curated inventory as `data/facilities.json` matching `FacilityDataset`.  
-Keep `data/facilities.sample.json` as the fixture used in CI/dev until the curated file exists.
+`data/facilities.json` is the only dataset; the sample fixture was removed once the curated inventory was established (2026-07-18).
 
 ---
 

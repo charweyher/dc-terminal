@@ -19,8 +19,7 @@ Public sources → data/raw/ (optional) → normalize + confidence → data/faci
 ```text
 data/
   sources.json              # source registry
-  facilities.sample.json    # schema fixture (always present)
-  facilities.json           # curated inventory (create in Phase 2; may start as copy of sample)
+  facilities.json           # curated inventory — the only dataset (every row real + sourced)
   aggregates.water.json     # optional national literature estimates
   meta.json                 # dataset version metadata
   raw/                      # optional downloads (gitignored if large)
@@ -59,7 +58,7 @@ CHANGELOG_DATA.md           # human log of inventory changes
 
 `scripts/validate-data.mjs` should:
 
-- Parse `facilities.json` (or sample if curated missing)  
+- Parse `facilities.json`  
 - Enforce rules in `docs/DATA_SCHEMA.md`  
 - Exit non-zero on failure  
 - Print counts: operating / planned / BTM confirmed / water known  
