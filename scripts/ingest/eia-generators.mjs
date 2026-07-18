@@ -41,16 +41,16 @@ const STATES =
     ? process.argv[statesArg + 1].split(",").map((s) => s.trim().toUpperCase())
     : ["TX", "GA", "TN", "VA", "LA", "OH", "AZ", "IA", "NM", "OK", "WA", "NJ"];
 
-// Plant-name keywords that suggest a data-center-adjacent generator.
-// Curators tune this list; keep it lowercase.
-const KEYWORDS = [
-  "data center", "data centre", "datacenter",
-  "colossus", "xai",
-  "meta ", "hyperion",
-  "google", "microsoft", "fairwater", "amazon", "aws",
-  "stargate", "openai", "oracle",
-  "vantage", "qts", "equinix", "digital realty", "cyrusone", "switch",
-  "iren", "riot", "hut 8", "hut8", "crusoe", "fermi",
+// Plant-name patterns that suggest a data-center-adjacent generator.
+// Word-boundary regexes — plain substrings match too much (e.g. "xai" hits
+// "Praxair", "riot" hits "Patriot Wind"). Curators tune this list.
+const PATTERNS = [
+  /data\s?cent(er|re)/, /\bcolossus\b/, /\bxai\b/,
+  /\bmeta\b/, /\bhyperion\b/,
+  /\bgoogle\b/, /\bmicrosoft\b/, /\bfairwater\b/, /\bamazon\b/, /\baws\b/,
+  /\bstargate\b/, /\bopenai\b/, /\boracle\b/,
+  /vantage data/, /\bqts\b/, /\bequinix\b/, /digital realty/, /\bcyrusone\b/,
+  /\biren\b/, /\briot\b/, /\bhut\s?8\b/, /\bcrusoe\b/, /\bfermi\b/,
 ];
 
 const BASE = "https://api.eia.gov/v2/electricity/operating-generator-capacity/data/";
@@ -93,7 +93,7 @@ for (const state of STATES) {
   let hit = 0;
   for (const r of latest.values()) {
     const name = (r.plantName ?? "").toLowerCase();
-    if (!KEYWORDS.some((k) => name.includes(k))) continue;
+    if (!PATTERNS.some((re) => re.test(name))) continue;
     hit++;
     matches.push({
       state,
@@ -123,7 +123,7 @@ writeFileSync(
       source: "EIA Open Data API v2 — operating generator capacity (EIA-860M lineage)",
       license: "U.S. government public data",
       states: STATES,
-      keywords: KEYWORDS,
+      patterns: PATTERNS.map(String),
       fetched_at: new Date().toISOString(),
       count: matches.length,
       note: "STAGING ONLY. Keyword match ≠ BTM confirmation — verify the generator serves the campus before citing.",
