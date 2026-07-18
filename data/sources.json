@@ -1,0 +1,131 @@
+{
+  "version": "0.1.0",
+  "sources": [
+    {
+      "id": "eia-860-overview",
+      "title": "Form EIA-860 detailed data",
+      "publisher": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/electricity/data/eia860/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "U.S. government public data. Use for generator/plant attributes ≥1 MW; not a data-center registry.",
+      "kind": "government"
+    },
+    {
+      "id": "pudl-eia860",
+      "title": "PUDL documentation — EIA Form 860",
+      "publisher": "Catalyst Cooperative",
+      "url": "https://docs.catalyst.coop/pudl/en/stable/data_sources/eia860.html",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Normalized EIA access; verify joins manually.",
+      "kind": "ngo"
+    },
+    {
+      "id": "lbnl-dc-energy-2024",
+      "title": "United States Data Center Energy Usage Report (LBNL / DOE lineage)",
+      "publisher": "Lawrence Berkeley National Laboratory",
+      "url": "https://eta.lbl.gov/publications/united-states-data-center-energy",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Use for national energy/water context; not facility inventory.",
+      "kind": "academic"
+    },
+    {
+      "id": "epa-dc-water-context-2025",
+      "title": "Data center water use context (EPA-cited national figures)",
+      "publisher": "U.S. Environmental Protection Agency / secondary policy briefs",
+      "url": "https://www.epa.gov/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "National context only; confirm specific figures against primary EPA/LBNL publications when updating aggregates.",
+      "kind": "government"
+    },
+    {
+      "id": "arxiv-hyperscale-water-2026",
+      "title": "The Hidden Water Geography of U.S. Hyperscale Data Centers in the AI Era",
+      "publisher": "arXiv preprint",
+      "url": "https://arxiv.org/html/2607.02531",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Academic estimates for hyperscale cohort; external aggregate context.",
+      "kind": "academic"
+    },
+    {
+      "id": "distilled-btm-2026",
+      "title": "Data Center Developers Want to Build Their Own Power Plants. How Many Actually Will?",
+      "publisher": "Distilled.Earth",
+      "url": "https://www.distilled.earth/p/data-center-developers-want-to-build",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Secondary journalism on BTM pipeline; mark facility BTM as reported unless corroborated by permits/EIA.",
+      "kind": "news"
+    },
+    {
+      "id": "google-env-report-2025",
+      "title": "Google environmental / data center water disclosures",
+      "publisher": "Google",
+      "url": "https://sustainability.google/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Corporate disclosure; site-level figures only when explicitly published.",
+      "kind": "corporate"
+    },
+    {
+      "id": "xai-colossus-press",
+      "title": "Public reporting on xAI Colossus Memphis campus and on-site generation",
+      "publisher": "Multiple news outlets / company statements",
+      "url": "https://www.nsenergybusiness.com/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Sample row uses reported confidence pending permit/EIA corroboration in curated updates.",
+      "kind": "news"
+    },
+    {
+      "id": "microsoft-fairwater-announcements",
+      "title": "Public announcements on Microsoft Fairwater Atlanta / QTS Georgia campus",
+      "publisher": "Company and regional press",
+      "url": null,
+      "accessed_at": "2026-07-18",
+      "license_notes": "Sample planned/operating capacity marked reported.",
+      "kind": "news"
+    },
+    {
+      "id": "digital-realty-iad-disclosures",
+      "title": "Digital Realty Northern Virginia facility public materials",
+      "publisher": "Digital Realty",
+      "url": "https://www.digitalrealty.com/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Sample capacity figures are illustrative of schema; replace with filing-backed values when curating.",
+      "kind": "corporate"
+    },
+    {
+      "id": "census-state-boundaries",
+      "title": "Cartographic Boundary Files — States",
+      "publisher": "U.S. Census Bureau",
+      "url": "https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html",
+      "accessed_at": "2026-07-18",
+      "license_notes": "For map choropleths; not facility points.",
+      "kind": "government"
+    },
+    {
+      "id": "sample-schema-fixture",
+      "title": "DC Terminal sample fixture (synthetic/illustrative public-style rows)",
+      "publisher": "DC Terminal",
+      "url": null,
+      "accessed_at": "2026-07-18",
+      "license_notes": "Used only for UI/schema development. Several MW/coords are estimated or reported placeholders — replace before publishing analytics.",
+      "kind": "other"
+    },
+    {
+      "id": "equinix-sustainability-2025",
+      "title": "Equinix sustainability water withdrawal/consumption disclosures",
+      "publisher": "Equinix",
+      "url": "https://www.equinix.com/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Often global/regional; use facility-level only when site-named.",
+      "kind": "corporate"
+    },
+    {
+      "id": "most-policy-dc-water",
+      "title": "Data Center Water Use — science note",
+      "publisher": "MOST Policy Initiative",
+      "url": "https://mostpolicyinitiative.org/science-note/data-center-water-use/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Secondary summary of EPA/LBNL figures for context panels.",
+      "kind": "ngo"
+    }
+  ]
+}

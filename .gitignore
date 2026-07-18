@@ -1,0 +1,20 @@
+# Dependencies / OS
+node_modules/
+.next/
+out/
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Large raw energy datasets
+data/raw/**/*.zip
+data/raw/**/*.xlsx
+data/raw/**/*.xls
+data/raw/**/*.csv
+!data/raw/README.md
+
+# Local Claude / editor
+.claude/settings.local.json

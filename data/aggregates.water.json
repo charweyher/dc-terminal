@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "notes": "External literature/national estimates for context panels ONLY. Do not add these into facility-row water sums. Update figures against primary publications when refreshing.",
+  "estimates": [
+    {
+      "id": "us-dc-direct-consumption-2023",
+      "label": "U.S. data centers direct water consumption (approx.)",
+      "value": 17.4,
+      "unit": "billion gallons / year",
+      "year": 2023,
+      "source_ids": ["most-policy-dc-water", "epa-dc-water-context-2025", "lbnl-dc-energy-2024"],
+      "confidence": "reported"
+    },
+    {
+      "id": "us-dc-direct-consumption-2028-low",
+      "label": "Projected U.S. direct consumption low (approx.)",
+      "value": 38,
+      "unit": "billion gallons / year",
+      "year": 2028,
+      "source_ids": ["most-policy-dc-water", "lbnl-dc-energy-2024"],
+      "confidence": "estimated"
+    },
+    {
+      "id": "us-dc-direct-consumption-2028-high",
+      "label": "Projected U.S. direct consumption high (approx.)",
+      "value": 73,
+      "unit": "billion gallons / year",
+      "year": 2028,
+      "source_ids": ["most-policy-dc-water", "lbnl-dc-energy-2024"],
+      "confidence": "estimated"
+    },
+    {
+      "id": "hyperscale-ops-water-baseline-gl",
+      "label": "Hyperscale cohort operational water (baseline scenario)",
+      "value": 300,
+      "unit": "GL / year",
+      "year": 2026,
+      "source_ids": ["arxiv-hyperscale-water-2026"],
+      "confidence": "estimated"
+    }
+  ]
+}
