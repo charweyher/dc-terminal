@@ -32,3 +32,7 @@
 - Second Overpass curation batch: +7 Google campuses and +9 Meta campuses (OSM parcel coordinates, corroborated by the operators' official facility-list pages). Capacity/water left unknown where not publicly disclosed.
 - 28 → 44 facilities. Water-known count drops 4 → 3 because a removed synthetic row carried illustrative water values — coverage now reflects only real disclosures.
 - New sources: microsoft-licking-cancellation, greenidge-filings, gem-greenidge, stargate-abilene-press, google-datacenter-locations.
+
+## 0.3.1 — 2026-07-18
+
+- Added `galaxy-helios-dickens-tx` (Galaxy Digital Helios, Dickens County TX): operating AI campus, 133 MW critical IT load delivered to CoreWeave (Phase I, July 2026 press release), ERCOT grid-supplied, formerly Argo Blockchain's Helios bitcoin mine (2022). Coordinates from OSM ("Argo Data Center" way/1490401523). Sources: Galaxy Phase I + ERCOT press releases, Texas A&M TRERC analysis. 44 → 45 facilities.

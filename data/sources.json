@@ -243,6 +243,33 @@
       "accessed_at": "2026-07-18",
       "license_notes": "Corporate page confirming operating campuses; no capacity disclosure.",
       "kind": "corporate"
+    },
+    {
+      "id": "galaxy-helios-phase1-press",
+      "title": "Galaxy Completes Phase I of Its Helios Data Center Campus, Delivering 133 Megawatts of Critical IT Load to CoreWeave",
+      "publisher": "Galaxy Digital (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/galaxy-completes-phase-i-of-its-helios-data-center-campus-delivering-133-megawatts-of-critical-it-load-to-coreweave-302818664.html",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Corporate press release; primary company disclosure.",
+      "kind": "corporate"
+    },
+    {
+      "id": "galaxy-helios-ercot-press",
+      "title": "Galaxy Completes ERCOT Interconnection Studies and Secures Approval for Additional 830 MW at Helios, Doubling Approved Capacity to over 1.6 GW",
+      "publisher": "Galaxy Digital (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/galaxy-completes-ercot-interconnection-studies-and-secures-approval-for-additional-830-megawatts-at-helios-data-center-campus-doubling-total-approved-power-capacity-to-over-1-6-gigawatts-302662509.html",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Corporate press release; ERCOT interconnection approvals.",
+      "kind": "corporate"
+    },
+    {
+      "id": "trerc-helios-story",
+      "title": "The Helios Story: From Bitcoin Mine to Data Center",
+      "publisher": "Texas Real Estate Research Center, Texas A&M University",
+      "url": "https://trerc.tamu.edu/blog/the-helios-story-from-bitcoin-mine-to-data-center/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Academic center analysis; history and capacity timeline.",
+      "kind": "academic"
     }
   ]
 }

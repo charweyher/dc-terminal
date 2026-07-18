@@ -5142,6 +5142,135 @@
       ],
       "last_reviewed": "2026-07-18",
       "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "galaxy-helios-dickens-tx",
+      "name": "Galaxy Helios (Dickens County)",
+      "aliases": [
+        "Helios",
+        "Argo Helios",
+        "Argo Data Center"
+      ],
+      "operator": "Galaxy Digital",
+      "developer": "Galaxy Digital",
+      "facility_type": "ai_campus",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 33.77726,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters",
+            "galaxy-helios-phase1-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -100.8689,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters",
+            "galaxy-helios-phase1-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Dickens",
+        "city": "Dickens",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 133,
+          "confidence": "reported",
+          "source_ids": [
+            "galaxy-helios-phase1-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": 133,
+          "confidence": "reported",
+          "source_ids": [
+            "galaxy-helios-phase1-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "year_operational": {
+          "value": 2022,
+          "confidence": "reported",
+          "source_ids": [
+            "trerc-helios-story"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "reported",
+          "source_ids": [
+            "galaxy-helios-ercot-press",
+            "trerc-helios-story"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "reported",
+          "source_ids": [
+            "galaxy-helios-ercot-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "galaxy-helios-phase1-press",
+        "galaxy-helios-ercot-press",
+        "trerc-helios-story",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Built 2022 as Argo Blockchain's Helios bitcoin mine (~180 MW); acquired by Galaxy Digital and converted to an AI campus hosting CoreWeave under a 15-year lease. Phase I complete July 2026: 200 MW gross / 133 MW critical IT load, rent commenced Q2 2026. ERCOT-approved campus capacity 1.63 GW (potential 3.6 GW); Phase II (260 MW IT) targeted H1 2027 \u2014 only delivered Phase I load is recorded here. Grid-supplied via ERCOT; no public evidence of on-site generation."
     }
   ]
 }
