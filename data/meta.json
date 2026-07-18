@@ -1,8 +1,8 @@
 {
   "name": "DC Terminal US Facilities",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "schema_version": "1",
   "last_updated": "2026-07-18",
-  "facility_count": 20,
+  "facility_count": 28,
   "notes": "Sample-seeded public aggregation fixture; not a national census. Several rows are illustrative/synthetic for schema testing."
 }

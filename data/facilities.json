@@ -900,7 +900,7 @@
         "state": "LA",
         "county": "Richland",
         "city": "Holly Ridge",
-        "precision": "site"
+        "precision": "parcel"
       },
       "capacity": {
         "it_load_mw": {
@@ -2442,6 +2442,943 @@
       ],
       "last_reviewed": "2026-07-18",
       "notes": "SYNTHETIC confirmed row to exercise CONF badges and BTM confirmed KPIs. Not a real campus \u2014 remove or replace before public analytics."
+    },
+    {
+      "id": "google-the-dalles-or",
+      "name": "Google The Dalles",
+      "aliases": [
+        "The Dalles campus"
+      ],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 45.632,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -121.2012,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OR",
+        "county": "Wasco",
+        "city": "The Dalles",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2006,
+          "confidence": "reported",
+          "source_ids": [
+            "google-dalles-water-records",
+            "google-env-report-2025"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "reported",
+          "source_ids": [
+            "google-env-report-2025"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": 1.263,
+          "confidence": "reported",
+          "source_ids": [
+            "google-dalles-water-records"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "consumption_mgd": {
+          "value": 0.99,
+          "confidence": "reported",
+          "source_ids": [
+            "google-dalles-water-records"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-dalles-water-records",
+        "google-env-report-2025",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Google's first company-built campus (2006). Water figures are 2024 calendar-year city/utility records released after The Oregonian public-records case: 461.1M gal withdrawn, 361.4M gal consumed. Capacity not publicly disclosed."
+    },
+    {
+      "id": "switch-citadel-tahoe-reno-nv",
+      "name": "Switch Citadel Campus (Tahoe Reno)",
+      "aliases": [
+        "Tahoe Reno 1\u20135",
+        "The Citadel"
+      ],
+      "operator": "Switch",
+      "developer": "Switch",
+      "facility_type": "colocation",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 39.5115,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -119.482,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NV",
+        "county": "Storey",
+        "city": "McCarran",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 130,
+          "confidence": "reported",
+          "source_ids": [
+            "switch-citadel-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2017,
+          "confidence": "reported",
+          "source_ids": [
+            "switch-citadel-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "osm-overpass-datacenters",
+        "switch-citadel-press"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "TR1 marketed at up to 130 MW; full campus planned at 650 MW / 7.2M sq ft (corporate 'up to' figures, treated as reported). Five TR buildings mapped in OSM; row is campus-level."
+    },
+    {
+      "id": "meta-prineville-or",
+      "name": "Meta Prineville",
+      "aliases": [
+        "Facebook Prineville"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 44.2965,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -120.8865,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OR",
+        "county": "Crook",
+        "city": "Prineville",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2011,
+          "confidence": "reported",
+          "source_ids": [
+            "meta-datacenter-pages"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "reported",
+          "source_ids": [
+            "meta-datacenter-pages"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Meta's first owned campus (2011). Meta publishes fleet-wide WUE (~0.18\u20130.26 L/kWh) but not audited per-facility water for Prineville, so water stays unknown here. Capacity not disclosed."
+    },
+    {
+      "id": "meta-los-lunas-nm",
+      "name": "Meta Los Lunas",
+      "aliases": [
+        "Facebook Los Lunas"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 34.8298,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -106.7785,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NM",
+        "county": "Valencia",
+        "city": "Los Lunas",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2019,
+          "confidence": "reported",
+          "source_ids": [
+            "meta-datacenter-pages",
+            "eia-860-overview"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "reported",
+          "source_ids": [
+            "eia-860-overview"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "reported",
+          "source_ids": [
+            "eia-860-overview"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "eia-860-overview",
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Served by dedicated NMRD solar plants (incl. 'NMRD Data Center III', 50 MW) via utility PPA \u2014 separate EIA plant records, so power is grid-supplied, not behind-the-meter."
+    },
+    {
+      "id": "microsoft-san-antonio-tx",
+      "name": "Microsoft San Antonio campus",
+      "aliases": [
+        "Azure South Central US"
+      ],
+      "operator": "Microsoft",
+      "developer": "Microsoft",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 29.4799,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -98.6925,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Bexar",
+        "city": "San Antonio",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2008,
+          "confidence": "reported",
+          "source_ids": [
+            "microsoft-local-sanantonio"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "microsoft-local-sanantonio",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Multi-building Westover Hills campus; Microsoft confirms operating datacenters in Bexar and Medina counties. Campus capacity not publicly disclosed."
+    },
+    {
+      "id": "apple-mesa-az",
+      "name": "Apple Mesa (Global Data & Command Center)",
+      "aliases": [
+        "Apple Mesa command center"
+      ],
+      "operator": "Apple",
+      "developer": "Apple",
+      "facility_type": "enterprise",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 33.347,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -111.6041,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "AZ",
+        "county": "Maricopa",
+        "city": "Mesa",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2017,
+          "confidence": "reported",
+          "source_ids": [
+            "apple-mesa-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "grid",
+          "confidence": "reported",
+          "source_ids": [
+            "apple-mesa-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": false,
+          "confidence": "reported",
+          "source_ids": [
+            "apple-mesa-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "apple-mesa-press",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "1.3M sq ft former GT Advanced facility, $2B conversion announced 2015, opened 2017. Associated 70 MW solar is off-site via SRP PPA, so not BTM; on-site generation unknown."
+    },
+    {
+      "id": "digital-realty-350-cermak-il",
+      "name": "350 E Cermak (Lakeside Technology Center)",
+      "aliases": [
+        "Lakeside Technology Center"
+      ],
+      "operator": "Digital Realty",
+      "developer": "Digital Realty",
+      "facility_type": "colocation",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 41.8537,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -87.6183,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "IL",
+        "county": "Cook",
+        "city": "Chicago",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 109,
+          "confidence": "reported",
+          "source_ids": [
+            "cermak-350-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 1999,
+          "confidence": "reported",
+          "source_ids": [
+            "cermak-350-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "cermak-350-press",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "1.1M sq ft carrier hotel on Chicago's Near South Side; press-reported 109 MW is total facility power capacity, not IT load \u2014 recorded as reported with that caveat."
+    },
+    {
+      "id": "meta-gallatin-tn",
+      "name": "Meta Gallatin",
+      "aliases": [
+        "Gallatin Data Center"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 36.4085,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -86.3716,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TN",
+        "county": "Sumner",
+        "city": "Gallatin",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2023,
+          "confidence": "reported",
+          "source_ids": [
+            "meta-datacenter-pages"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating Sumner County campus; capacity and water not publicly disclosed at facility level."
     }
   ]
 }

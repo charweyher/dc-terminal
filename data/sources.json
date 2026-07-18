@@ -144,6 +144,60 @@
       "accessed_at": "2026-07-18",
       "license_notes": "ODbL \u2014 \u00a9 OpenStreetMap contributors. Used for candidate discovery and coordinates; every promoted row is cross-checked against a second public source.",
       "kind": "other"
+    },
+    {
+      "id": "google-dalles-water-records",
+      "title": "Google The Dalles water use \u2014 public records released after The Oregonian lawsuit; 2024 withdrawal/consumption figures",
+      "publisher": "Latitude Media / The Oregonian / City of The Dalles public records",
+      "url": "https://www.latitudemedia.com/news/data-center-water-use-black-box-google-trying-to-change/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Public records + journalism; facility-level figures released by settlement.",
+      "kind": "news"
+    },
+    {
+      "id": "switch-citadel-press",
+      "title": "Switch Tahoe Reno (Citadel Campus) opening announcement \u2014 TR1 up to 130 MW; campus planned 650 MW",
+      "publisher": "Switch",
+      "url": "https://www.switch.com/switch-tahoe-reno-data-center-now-open/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Corporate marketing figures; 'up to' capacity claims.",
+      "kind": "corporate"
+    },
+    {
+      "id": "meta-datacenter-pages",
+      "title": "Meta data center facility pages (Prineville, Los Lunas, Gallatin) and sustainability data index",
+      "publisher": "Meta",
+      "url": "https://datacenters.atmeta.com/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Corporate disclosures; water/WUE published fleet-wide, not per-facility.",
+      "kind": "corporate"
+    },
+    {
+      "id": "microsoft-local-sanantonio",
+      "title": "Microsoft Local \u2014 Greater San Antonio datacenter community page (Bexar and Medina counties)",
+      "publisher": "Microsoft",
+      "url": "https://local.microsoft.com/communities/americas/greater-san-antonio/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Corporate community page confirming operating campus presence.",
+      "kind": "corporate"
+    },
+    {
+      "id": "apple-mesa-press",
+      "title": "Apple $2B global command / data center in Mesa, AZ \u2014 2015 announcement, opened 2017",
+      "publisher": "CNBC / City of Mesa",
+      "url": "https://www.cnbc.com/2015/02/02/apple-announces-2b-global-command-center-in-arizona.html",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Press coverage of corporate announcement; associated 70 MW solar is off-site via utility PPA.",
+      "kind": "news"
+    },
+    {
+      "id": "cermak-350-press",
+      "title": "350 E Cermak / Lakeside Technology Center, Chicago \u2014 1.1M sq ft carrier hotel, 109 MW capacity",
+      "publisher": "Data Center Knowledge / press",
+      "url": "https://www.datacenterknowledge.com/business/chicago-s-data-fortress-for-the-digital-economy",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Press profile; capacity is total facility power, not IT load.",
+      "kind": "news"
     }
   ]
 }

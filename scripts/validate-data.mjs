@@ -14,6 +14,8 @@ const USPS = new Set([
 
 const CONFIDENCES = new Set(["confirmed", "reported", "estimated", "unknown"]);
 const STATUSES = new Set(["operating", "planned", "under_construction", "cancelled"]);
+const PRECISIONS = new Set(["exact", "parcel", "city", "county", "state"]);
+const FACILITY_TYPES = new Set(["hyperscale", "colocation", "enterprise", "crypto_mining", "ai_campus", "other"]);
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf8"));
@@ -61,6 +63,12 @@ function validateFile(file) {
     if (!STATUSES.has(f.status)) errors.push(`${fid}: invalid status "${f.status}"`);
     if (!USPS.has(f.location?.state)) {
       errors.push(`${fid}: invalid state "${f.location?.state}"`);
+    }
+    if (!PRECISIONS.has(f.location?.precision)) {
+      errors.push(`${fid}: invalid location precision "${f.location?.precision}"`);
+    }
+    if (!FACILITY_TYPES.has(f.facility_type)) {
+      errors.push(`${fid}: invalid facility_type "${f.facility_type}"`);
     }
 
     const lat = f.location?.lat;
