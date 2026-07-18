@@ -41,11 +41,48 @@ function checkConfidentValue(cv, label, fid) {
     errors.push(`${fid}: ${label}.source_ids is not an array`);
     return;
   }
+  // Provenance rule: any asserted value must cite at least one source.
+  if (cv.confidence !== "unknown" && cv.value !== null && cv.source_ids.length === 0) {
+    errors.push(`${fid}: ${label} asserts a value with no source_ids`);
+  }
   for (const sid of cv.source_ids) {
     if (!sourceIds.has(sid)) {
       errors.push(`${fid}: ${label} references unknown source id "${sid}"`);
     }
   }
+}
+
+// --- Geographic cross-check: coordinates must fall inside the claimed state.
+// Reuses the map's state polygons; catches transposed digits, wrong-state
+// rows, and lat/lng swaps (the Meta Hyperion class of error).
+const statesGeo = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "public", "us-states.geojson"), "utf8")
+);
+
+function inRing(lng, lat, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i];
+    const [xj, yj] = ring[j];
+    if (yi > lat !== yj > lat && lng < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) {
+      inside = !inside;
+    }
+  }
+  return inside;
+}
+
+function stateContains(code, lng, lat) {
+  const feat = statesGeo.features.find((f) => f.properties.code === code);
+  if (!feat) return null; // territory without polygon — cannot check
+  const polys =
+    feat.geometry.type === "Polygon"
+      ? [feat.geometry.coordinates]
+      : feat.geometry.coordinates;
+  return polys.some(
+    (poly) =>
+      inRing(lng, lat, poly[0]) &&
+      !poly.slice(1).some((hole) => inRing(lng, lat, hole))
+  );
 }
 
 function validateFile(file) {
@@ -108,6 +145,36 @@ function validateFile(file) {
         )}`
       );
     }
+
+    // Coordinates must fall inside the claimed state. Coarse precisions get a
+    // warning (centroids can drift over borders); exact/parcel are errors.
+    if (typeof lat?.value === "number" && typeof lng?.value === "number") {
+      const inside = stateContains(f.location.state, lng.value, lat.value);
+      if (inside === false) {
+        const msg = `${fid}: coordinates (${lat.value}, ${lng.value}) fall outside claimed state ${f.location.state}`;
+        if (["exact", "parcel"].includes(f.location?.precision)) errors.push(msg);
+        else warnings.push(msg);
+      }
+    }
+  }
+
+  // Duplicate detection: two rows within ~1 km are probably the same campus.
+  const located = facilities.filter(
+    (f) =>
+      typeof f.location?.lat?.value === "number" &&
+      typeof f.location?.lng?.value === "number"
+  );
+  for (let i = 0; i < located.length; i++) {
+    for (let j = i + 1; j < located.length; j++) {
+      const a = located[i], b = located[j];
+      const dLat = Math.abs(a.location.lat.value - b.location.lat.value);
+      const dLng = Math.abs(a.location.lng.value - b.location.lng.value);
+      if (dLat < 0.01 && dLng < 0.012) {
+        warnings.push(
+          `${file} → ${a.id} and ${b.id} are within ~1 km of each other — same campus?`
+        );
+      }
+    }
   }
 
   const counts = {
@@ -131,6 +198,36 @@ function validateFile(file) {
 }
 
 validateFile("facilities.json");
+
+// meta.json must agree with the dataset it describes.
+const meta = readJson("meta.json");
+const actualCount = readJson("facilities.json").facilities.length;
+if (meta.facility_count !== actualCount) {
+  errors.push(
+    `meta.json: facility_count=${meta.facility_count} but facilities.json has ${actualCount} rows — bump data/meta.json`
+  );
+}
+
+// Every registered source must actually be cited somewhere (dead entries rot).
+// Citations live in facility rows and the national water-context aggregates.
+const ALLOW_UNCITED = new Set([
+  "census-state-boundaries", // provenance of public/us-states.geojson (map layer)
+  "pudl-eia860", // documented future feed (docs/DATA_SOURCES.md)
+]);
+const cited = new Set();
+const walk = (o) => {
+  if (o && typeof o === "object") {
+    if (Array.isArray(o.source_ids)) o.source_ids.forEach((s) => cited.add(s));
+    Object.values(o).forEach(walk);
+  }
+};
+walk(readJson("facilities.json").facilities);
+walk(readJson("aggregates.water.json"));
+for (const sid of sourceIds) {
+  if (!cited.has(sid) && !ALLOW_UNCITED.has(sid)) {
+    warnings.push(`sources.json: "${sid}" is registered but never cited`);
+  }
+}
 
 for (const w of warnings) console.warn(`WARN  ${w}`);
 for (const e of errors) console.error(`ERROR ${e}`);

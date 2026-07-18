@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/validate-data.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
     "validate:data": "node scripts/validate-data.mjs",
     "ingest:overpass": "node scripts/ingest/overpass-datacenters.mjs",
     "build:candidates": "node scripts/build-osm-candidates.mjs",
-    "ingest:eia": "node --env-file-if-exists=.env scripts/ingest/eia-generators.mjs"
+    "ingest:eia": "node --env-file-if-exists=.env scripts/ingest/eia-generators.mjs",
+    "refresh:osm": "npm run ingest:overpass && npm run build:candidates && npm run validate:data"
   },
   "dependencies": {
     "maplibre-gl": "^5.24.0",
