@@ -198,6 +198,51 @@
       "accessed_at": "2026-07-18",
       "license_notes": "Press profile; capacity is total facility power, not IT load.",
       "kind": "news"
+    },
+    {
+      "id": "microsoft-licking-cancellation",
+      "title": "Microsoft backs away from $1bn data center plans in Licking County, Ohio (New Albany, Heath, Hebron) \u2014 April 2025",
+      "publisher": "Data Center Dynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/microsoft-backs-away-from-1bn-data-center-plans-in-licking-county-ohio/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Press coverage; Microsoft retains the land, so 'cancelled' reflects the announced projects, not the sites forever.",
+      "kind": "news"
+    },
+    {
+      "id": "greenidge-filings",
+      "title": "Greenidge Generation Dresden NY \u2014 behind-the-meter bitcoin data center at 106 MW gas plant (corporate announcements, SEC-registered issuer)",
+      "publisher": "Greenidge Generation Holdings",
+      "url": "https://greenidge.com/greenidge-generation-announces-successful-start-of-operations-at-state-of-the-art-data-center-for-digital-currencies/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Primary corporate documents from an SEC issuer; plant is EIA-registered and holds a NY Title V air permit.",
+      "kind": "corporate"
+    },
+    {
+      "id": "gem-greenidge",
+      "title": "Greenidge Generation Yates County facility \u2014 Global Energy Monitor wiki profile",
+      "publisher": "Global Energy Monitor",
+      "url": "https://www.gem.wiki/Greenidge_Generation_Yates_County_facility",
+      "accessed_at": "2026-07-18",
+      "license_notes": "NGO-maintained plant profile aggregating permits and filings.",
+      "kind": "ngo"
+    },
+    {
+      "id": "stargate-abilene-press",
+      "title": "Stargate Abilene (Crusoe / Oracle / OpenAI) \u2014 site status, ~360 MW permitted behind-the-meter gas, 1.2 GW projected",
+      "publisher": "Epoch AI / press",
+      "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Research/press aggregation of permits and public statements; projected capacity is a buildout figure, not operating load.",
+      "kind": "news"
+    },
+    {
+      "id": "google-datacenter-locations",
+      "title": "Google data center locations \u2014 official facility list",
+      "publisher": "Google",
+      "url": "https://www.google.com/about/datacenters/locations/",
+      "accessed_at": "2026-07-18",
+      "license_notes": "Corporate page confirming operating campuses; no capacity disclosure.",
+      "kind": "corporate"
     }
   ]
 }

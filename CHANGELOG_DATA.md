@@ -22,3 +22,13 @@
   - `microsoft-san-antonio-tx`, `apple-mesa-az`, `digital-realty-350-cermak-il` (109 MW total-power figure).
 - New sources: google-dalles-water-records, switch-citadel-press, meta-datacenter-pages, microsoft-local-sanantonio, apple-mesa-press, cermak-350-press.
 - Fix: `meta-hyperion-la` precision `site` → `parcel` (0.1.1 used a value outside the schema enum); validator now enforces precision and facility_type enums.
+
+## 0.3.0 — 2026-07-18
+
+- **All synthetic rows removed** (`cancelled-demo-or`, `confirmed-btm-demo-ok`, `nebius-nj-btm-planned`) and replaced with real, sourced equivalents serving the same KPI roles:
+  - `msft-licking-county-oh` — real cancellation (Microsoft's $1B New Albany/Heath/Hebron plan, April 2025); county precision.
+  - `greenidge-dresden-ny` — real **confirmed** BTM: bitcoin mining inside an operator-owned 106 MW gas plant (SEC issuer filings + Title V permit + EIA plant); hybrid interconnect (sells excess to NYISO).
+  - `stargate-abilene-tx` — real under-construction BTM flagship: ~360 MW permitted on-site gas, 1,200 MW press-reported full buildout (labeled as such), city precision.
+- Second Overpass curation batch: +7 Google campuses and +9 Meta campuses (OSM parcel coordinates, corroborated by the operators' official facility-list pages). Capacity/water left unknown where not publicly disclosed.
+- 28 → 44 facilities. Water-known count drops 4 → 3 because a removed synthetic row carried illustrative water values — coverage now reflects only real disclosures.
+- New sources: microsoft-licking-cancellation, greenidge-filings, gem-greenidge, stargate-abilene-press, google-datacenter-locations.

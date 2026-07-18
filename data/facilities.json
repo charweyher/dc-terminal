@@ -1469,129 +1469,6 @@
       "notes": null
     },
     {
-      "id": "nebius-nj-btm-planned",
-      "name": "Nebius New Jersey \u2014 onsite generation campus",
-      "aliases": [
-        "Microsoft Nebius NJ"
-      ],
-      "operator": "Nebius",
-      "developer": "Nebius",
-      "facility_type": "ai_campus",
-      "status": "under_construction",
-      "location": {
-        "lat": {
-          "value": 40.58,
-          "confidence": "estimated",
-          "source_ids": [
-            "distilled-btm-2026",
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "lng": {
-          "value": -74.45,
-          "confidence": "estimated",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "state": "NJ",
-        "county": null,
-        "city": null,
-        "precision": "state"
-      },
-      "capacity": {
-        "it_load_mw": {
-          "value": 400,
-          "confidence": "reported",
-          "source_ids": [
-            "distilled-btm-2026"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "critical_load_mw": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "year_operational": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "expected_year": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        }
-      },
-      "power": {
-        "grid_interconnect": {
-          "value": "behind_the_meter",
-          "confidence": "reported",
-          "source_ids": [
-            "distilled-btm-2026"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "behind_the_meter": {
-          "value": true,
-          "confidence": "reported",
-          "source_ids": [
-            "distilled-btm-2026"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "onsite_generation_mw": {
-          "value": 400,
-          "confidence": "reported",
-          "source_ids": [
-            "distilled-btm-2026"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "fuel_types": [
-          "natural_gas"
-        ]
-      },
-      "water": {
-        "withdrawal_mgd": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "consumption_mgd": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "wue_l_per_kwh": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "cooling_type": {
-          "value": "unknown",
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        }
-      },
-      "source_ids": [
-        "distilled-btm-2026",
-        "sample-schema-fixture"
-      ],
-      "last_reviewed": "2026-07-18",
-      "notes": "Air permit challenges reported in secondary coverage; location precision coarse on purpose."
-    },
-    {
       "id": "equinix-dc12-va",
       "name": "Equinix DC12 (sample)",
       "aliases": [
@@ -2076,117 +1953,6 @@
       "notes": "Under-construction sample distinct from named Fairwater buildings."
     },
     {
-      "id": "cancelled-demo-or",
-      "name": "Demo Cancelled Project (OR)",
-      "aliases": [],
-      "operator": null,
-      "developer": null,
-      "facility_type": "other",
-      "status": "cancelled",
-      "location": {
-        "lat": {
-          "value": 45.5,
-          "confidence": "estimated",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "lng": {
-          "value": -122.7,
-          "confidence": "estimated",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "state": "OR",
-        "county": "Multnomah",
-        "city": "Portland",
-        "precision": "city"
-      },
-      "capacity": {
-        "it_load_mw": {
-          "value": 50,
-          "confidence": "estimated",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "critical_load_mw": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "year_operational": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "expected_year": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        }
-      },
-      "power": {
-        "grid_interconnect": {
-          "value": "unknown",
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "behind_the_meter": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "onsite_generation_mw": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "fuel_types": []
-      },
-      "water": {
-        "withdrawal_mgd": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "consumption_mgd": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "wue_l_per_kwh": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "cooling_type": {
-          "value": "unknown",
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        }
-      },
-      "source_ids": [
-        "sample-schema-fixture"
-      ],
-      "last_reviewed": "2026-07-18",
-      "notes": "Synthetic cancelled row to test KPI exclusion rules."
-    },
-    {
       "id": "vantage-quincy-wa",
       "name": "Vantage Quincy (sample)",
       "aliases": [],
@@ -2302,146 +2068,6 @@
       ],
       "last_reviewed": "2026-07-18",
       "notes": null
-    },
-    {
-      "id": "confirmed-btm-demo-ok",
-      "name": "Demo Confirmed BTM Campus (OK)",
-      "aliases": [
-        "Schema confirmed BTM"
-      ],
-      "operator": "Demo Operator",
-      "developer": "Demo Developer",
-      "facility_type": "ai_campus",
-      "status": "operating",
-      "location": {
-        "lat": {
-          "value": 35.5,
-          "confidence": "confirmed",
-          "source_ids": [
-            "eia-860-overview",
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "lng": {
-          "value": -97.5,
-          "confidence": "confirmed",
-          "source_ids": [
-            "eia-860-overview",
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "state": "OK",
-        "county": "Oklahoma",
-        "city": null,
-        "precision": "parcel"
-      },
-      "capacity": {
-        "it_load_mw": {
-          "value": 200,
-          "confidence": "confirmed",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "critical_load_mw": {
-          "value": 180,
-          "confidence": "confirmed",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "year_operational": {
-          "value": 2024,
-          "confidence": "confirmed",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "expected_year": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        }
-      },
-      "power": {
-        "grid_interconnect": {
-          "value": "behind_the_meter",
-          "confidence": "confirmed",
-          "source_ids": [
-            "eia-860-overview",
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "behind_the_meter": {
-          "value": true,
-          "confidence": "confirmed",
-          "source_ids": [
-            "eia-860-overview",
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "onsite_generation_mw": {
-          "value": 220,
-          "confidence": "confirmed",
-          "source_ids": [
-            "eia-860-overview",
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "fuel_types": [
-          "natural_gas",
-          "solar"
-        ]
-      },
-      "water": {
-        "withdrawal_mgd": {
-          "value": 0.8,
-          "confidence": "confirmed",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "consumption_mgd": {
-          "value": 0.5,
-          "confidence": "confirmed",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "wue_l_per_kwh": {
-          "value": 1.8,
-          "confidence": "estimated",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        },
-        "cooling_type": {
-          "value": "hybrid",
-          "confidence": "confirmed",
-          "source_ids": [
-            "sample-schema-fixture"
-          ],
-          "as_of": "2026-07-18"
-        }
-      },
-      "source_ids": [
-        "eia-860-overview",
-        "sample-schema-fixture"
-      ],
-      "last_reviewed": "2026-07-18",
-      "notes": "SYNTHETIC confirmed row to exercise CONF badges and BTM confirmed KPIs. Not a real campus \u2014 remove or replace before public analytics."
     },
     {
       "id": "google-the-dalles-or",
@@ -3379,6 +3005,2143 @@
       ],
       "last_reviewed": "2026-07-18",
       "notes": "Operating Sumner County campus; capacity and water not publicly disclosed at facility level."
+    },
+    {
+      "id": "msft-licking-county-oh",
+      "name": "Microsoft Licking County campuses (cancelled)",
+      "aliases": [
+        "New Albany / Heath / Hebron projects"
+      ],
+      "operator": "Microsoft",
+      "developer": "Microsoft",
+      "facility_type": "hyperscale",
+      "status": "cancelled",
+      "location": {
+        "lat": {
+          "value": 40.09,
+          "confidence": "estimated",
+          "source_ids": [
+            "microsoft-licking-cancellation"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -82.48,
+          "confidence": "estimated",
+          "source_ids": [
+            "microsoft-licking-cancellation"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OH",
+        "county": "Licking",
+        "city": null,
+        "precision": "county"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "microsoft-licking-cancellation"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "$1B three-site plan announced Oct 2024, cancelled April 2025. Microsoft retains the land, so future development is possible; row records the cancelled projects. County-centroid coordinates."
+    },
+    {
+      "id": "greenidge-dresden-ny",
+      "name": "Greenidge Generation (Dresden)",
+      "aliases": [
+        "Greenidge Power Plant and Data Center"
+      ],
+      "operator": "Greenidge Generation",
+      "developer": "Greenidge Generation",
+      "facility_type": "crypto_mining",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 42.6794,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters",
+            "gem-greenidge"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -76.9486,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters",
+            "gem-greenidge"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NY",
+        "county": "Yates",
+        "city": "Dresden",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": 2020,
+          "confidence": "reported",
+          "source_ids": [
+            "greenidge-filings"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "hybrid",
+          "confidence": "confirmed",
+          "source_ids": [
+            "greenidge-filings",
+            "gem-greenidge"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": true,
+          "confidence": "confirmed",
+          "source_ids": [
+            "greenidge-filings",
+            "gem-greenidge"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": 106,
+          "confidence": "confirmed",
+          "source_ids": [
+            "gem-greenidge",
+            "greenidge-filings"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "fuel_types": [
+          "natural_gas"
+        ]
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "gem-greenidge",
+        "greenidge-filings",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Bitcoin mining co-located inside a 106 MW gas plant the operator owns \u2014 textbook behind-the-meter, documented in SEC filings and NY Title V permit. Mining load has ranged ~14\u201385 MW; excess power sold to NYISO (hybrid). IT load left unknown because the split shifts dynamically."
+    },
+    {
+      "id": "stargate-abilene-tx",
+      "name": "Stargate Abilene (Crusoe campus)",
+      "aliases": [
+        "Lancium Clean Campus",
+        "Project Stargate flagship"
+      ],
+      "operator": "Crusoe / Oracle / OpenAI",
+      "developer": "Crusoe / Oracle / OpenAI",
+      "facility_type": "ai_campus",
+      "status": "under_construction",
+      "location": {
+        "lat": {
+          "value": 32.4487,
+          "confidence": "estimated",
+          "source_ids": [
+            "stargate-abilene-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -99.7331,
+          "confidence": "estimated",
+          "source_ids": [
+            "stargate-abilene-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Taylor",
+        "city": "Abilene",
+        "precision": "city"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": 1200,
+          "confidence": "reported",
+          "source_ids": [
+            "stargate-abilene-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": 2026,
+          "confidence": "reported",
+          "source_ids": [
+            "stargate-abilene-press"
+          ],
+          "as_of": "2026-07-18"
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "hybrid",
+          "confidence": "reported",
+          "source_ids": [
+            "stargate-abilene-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "behind_the_meter": {
+          "value": true,
+          "confidence": "reported",
+          "source_ids": [
+            "stargate-abilene-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "onsite_generation_mw": {
+          "value": 360,
+          "confidence": "reported",
+          "source_ids": [
+            "stargate-abilene-press"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "fuel_types": [
+          "natural_gas"
+        ]
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "stargate-abilene-press"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Flagship Stargate site; roughly half the buildings already operating, so status=under_construction understates partial operation. 1,200 MW is the press-reported full-buildout figure, not current load (~300 MW). Permit authorizes ~360 MW of behind-the-meter simple-cycle gas explicitly for on-site data center use; grid supply (incl. wind) also used."
+    },
+    {
+      "id": "google-berkeley-county-sc",
+      "name": "Google Berkeley County",
+      "aliases": [],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 33.064,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -80.0424,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "SC",
+        "county": "Berkeley",
+        "city": "Moncks Corner",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-datacenter-locations",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Google's official locations page; capacity and facility-level water not publicly disclosed."
+    },
+    {
+      "id": "google-jackson-county-al",
+      "name": "Google Jackson County",
+      "aliases": [],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 34.9147,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -85.7484,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "AL",
+        "county": "Jackson",
+        "city": "Bridgeport",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-datacenter-locations",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Google's official locations page; capacity and facility-level water not publicly disclosed."
+    },
+    {
+      "id": "google-montgomery-tn",
+      "name": "Google Montgomery County",
+      "aliases": [],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 36.6283,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -87.2601,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TN",
+        "county": "Montgomery",
+        "city": "Clarksville",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-datacenter-locations",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Google's official locations page; capacity and facility-level water not publicly disclosed."
+    },
+    {
+      "id": "google-henderson-nv",
+      "name": "Google Henderson",
+      "aliases": [],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 36.0575,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -115.0087,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NV",
+        "county": "Clark",
+        "city": "Henderson",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-datacenter-locations",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Google's official locations page; capacity and facility-level water not publicly disclosed."
+    },
+    {
+      "id": "google-midlothian-tx",
+      "name": "Google Midlothian",
+      "aliases": [],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 32.4421,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -97.0625,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Ellis",
+        "city": "Midlothian",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-datacenter-locations",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Google's official locations page; capacity and facility-level water not publicly disclosed."
+    },
+    {
+      "id": "google-papillion-ne",
+      "name": "Google Papillion",
+      "aliases": [],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 41.135,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -96.1467,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NE",
+        "county": "Sarpy",
+        "city": "Papillion",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-datacenter-locations",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Google's official locations page; capacity and facility-level water not publicly disclosed."
+    },
+    {
+      "id": "google-new-albany-oh",
+      "name": "Google New Albany",
+      "aliases": [],
+      "operator": "Google",
+      "developer": "Google",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 40.0579,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -82.7653,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OH",
+        "county": "Licking",
+        "city": "New Albany",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "google-datacenter-locations",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Google's official locations page; capacity and facility-level water not publicly disclosed."
+    },
+    {
+      "id": "meta-altoona-ia",
+      "name": "Meta Altoona",
+      "aliases": [
+        "Facebook Altoona"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 41.667,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -93.5115,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "IA",
+        "county": "Polk",
+        "city": "Altoona",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-fort-worth-tx",
+      "name": "Meta Fort Worth",
+      "aliases": [
+        "Facebook Fort Worth"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 32.9857,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -97.2565,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "TX",
+        "county": "Tarrant",
+        "city": "Fort Worth",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-sarpy-ne",
+      "name": "Meta Sarpy (Papillion)",
+      "aliases": [
+        "Facebook Papillion"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 41.12,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -96.1412,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NE",
+        "county": "Sarpy",
+        "city": "Papillion",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-huntsville-al",
+      "name": "Meta Huntsville",
+      "aliases": [],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 34.8437,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -86.6282,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "AL",
+        "county": "Madison",
+        "city": "Huntsville",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-henrico-va",
+      "name": "Meta Henrico",
+      "aliases": [
+        "Facebook White Oak"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 37.4812,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -77.2325,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "VA",
+        "county": "Henrico",
+        "city": "Sandston",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-forest-city-nc",
+      "name": "Meta Forest City",
+      "aliases": [
+        "Facebook Forest City"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 35.316,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -81.8239,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "NC",
+        "county": "Rutherford",
+        "city": "Forest City",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-eagle-mountain-ut",
+      "name": "Meta Eagle Mountain",
+      "aliases": [],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 40.2689,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -112.0173,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "UT",
+        "county": "Utah",
+        "city": "Eagle Mountain",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-newton-ga",
+      "name": "Meta Newton (Stanton Springs)",
+      "aliases": [
+        "Meta Stanton Springs"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 33.6005,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -83.7004,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "GA",
+        "county": "Newton",
+        "city": "Social Circle",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
+    },
+    {
+      "id": "meta-new-albany-oh",
+      "name": "Meta New Albany",
+      "aliases": [
+        "LCO campus"
+      ],
+      "operator": "Meta",
+      "developer": "Meta",
+      "facility_type": "hyperscale",
+      "status": "operating",
+      "location": {
+        "lat": {
+          "value": 40.064,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "lng": {
+          "value": -82.746,
+          "confidence": "reported",
+          "source_ids": [
+            "osm-overpass-datacenters"
+          ],
+          "as_of": "2026-07-18"
+        },
+        "state": "OH",
+        "county": "Licking",
+        "city": "New Albany",
+        "precision": "parcel"
+      },
+      "capacity": {
+        "it_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "critical_load_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "year_operational": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "expected_year": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "power": {
+        "grid_interconnect": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "behind_the_meter": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "onsite_generation_mw": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "fuel_types": []
+      },
+      "water": {
+        "withdrawal_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "consumption_mgd": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "wue_l_per_kwh": {
+          "value": null,
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        },
+        "cooling_type": {
+          "value": "unknown",
+          "confidence": "unknown",
+          "source_ids": [],
+          "as_of": null
+        }
+      },
+      "source_ids": [
+        "meta-datacenter-pages",
+        "osm-overpass-datacenters"
+      ],
+      "last_reviewed": "2026-07-18",
+      "notes": "Operating campus confirmed by Meta's official data center pages; capacity not disclosed and water published fleet-wide only, so both stay unknown."
     }
   ]
 }
