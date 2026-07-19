@@ -35,11 +35,12 @@ No API keys are required. The map uses CARTO's free "Dark Matter" basemap (style
 | Route | Purpose |
 |-------|---------|
 | `/` | KPI strip (with coverage sublines), map preview, largest operating/planned tables |
+| `/learn` | Data Centers 101 — plain-language primer: what/why, benefits, impacts, key terms |
 | `/map` | Full map + status / BTM / water / state filters |
 | `/facilities` | Dense sortable, searchable, filterable table |
 | `/facilities/[id]` | Full record with per-field confidence badges + sources |
 | `/states/[code]` | State rollups (invalid USPS codes → 404) |
-| `/behind-the-meter` | BTM definition, confirmed vs reported ranked lists, coverage |
+| `/behind-the-meter` | BTM explainer, single evidence-labeled ranked list, coverage |
 | `/water` | Known-water facilities, coverage, labeled external estimates |
 | `/methodology` | Confidence model, pipeline, source registry, non-completeness disclaimer |
 

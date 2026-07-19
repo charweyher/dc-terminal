@@ -27,7 +27,7 @@ function BtmTable({ facilities }: { facilities: Facility[] }) {
           <th className="py-1.5 pr-2 font-medium">Status</th>
           <th className="py-1.5 pr-2 text-right font-medium">On-site gen MW</th>
           <th className="py-1.5 pr-2 font-medium">Fuel</th>
-          <th className="py-1.5 font-medium">BTM conf</th>
+          <th className="py-1.5 font-medium">Evidence</th>
         </tr>
       </thead>
       <tbody>
@@ -80,14 +80,8 @@ export default function BehindTheMeterPage() {
   const k = computeKpis(facilities);
   const nonCancelled = facilities.filter((f) => f.status !== "cancelled");
 
-  const btmTrue = nonCancelled.filter(
-    (f) => f.power.behind_the_meter.value === true
-  );
-  const confirmed = rankByOnsiteGen(
-    btmTrue.filter((f) => f.power.behind_the_meter.confidence === "confirmed")
-  );
-  const reported = rankByOnsiteGen(
-    btmTrue.filter((f) => f.power.behind_the_meter.confidence !== "confirmed")
+  const btmTrue = rankByOnsiteGen(
+    nonCancelled.filter((f) => f.power.behind_the_meter.value === true)
   );
   const unknownCount = nonCancelled.filter(
     (f) => f.power.behind_the_meter.confidence === "unknown"
@@ -99,19 +93,33 @@ export default function BehindTheMeterPage() {
         Behind-the-Meter Power
       </h1>
 
-      <Panel title="What counts as BTM here">
-        <p className="max-w-3xl text-[13px] text-fg-muted">
-          On-site generation that primarily serves the data center campus —
-          dedicated plant, behind-the-meter gas turbines, private wire, or
-          co-located generation under common control — as opposed to solely
-          taking retail/wholesale grid power. Hybrid sites (grid + on-site) are
-          flagged BTM when on-site generation is material to operations.
-          Evidence standards are described on the{" "}
-          <Link href="/methodology" className="underline hover:text-fg">
-            methodology page
-          </Link>
-          .
-        </p>
+      <Panel title="What does behind-the-meter mean?">
+        <div className="max-w-3xl space-y-2 text-[13px] text-fg-muted">
+          <p>
+            Most data centers plug into the electric grid like any large
+            customer. A <span className="text-fg">behind-the-meter (BTM)</span>{" "}
+            facility generates some or all of its own power on site — gas
+            turbines, a dedicated power plant, or co-located generation under
+            the operator&apos;s control — so that electricity reaches the
+            servers without passing through a utility meter.
+          </p>
+          <p>
+            <span className="text-fg">Why operators do it:</span> connecting a
+            gigawatt-scale campus to the grid can take years of interconnection
+            studies and new transmission construction. On-site generation lets
+            a campus energize in months instead — xAI&apos;s Colossus in
+            Memphis (reported gas turbines) and Galaxy&apos;s converted power
+            infrastructure are examples of builders choosing speed. It can also
+            insulate the local grid from a huge new load.
+          </p>
+          <p>
+            <span className="text-fg">Why it&apos;s scrutinized:</span> on-site
+            combustion needs air permits and produces local emissions, and BTM
+            load is harder for regulators and grid planners to see. That&apos;s
+            why this page separates what&apos;s <em>confirmed</em> by primary
+            documents from what&apos;s <em>reported</em> by credible press.
+          </p>
+        </div>
       </Panel>
 
       <div className="panel-in grid grid-cols-2 rounded-[2px] border border-hairline bg-bg-1 md:grid-cols-4 lg:divide-x lg:divide-hairline">
@@ -137,12 +145,18 @@ export default function BehindTheMeterPage() {
         />
       </div>
 
-      <Panel title={`Confirmed (${confirmed.length}) — primary documents`}>
-        <BtmTable facilities={confirmed} />
-      </Panel>
-
-      <Panel title={`Reported (${reported.length}) — credible secondary sources, not independently verified`}>
-        <BtmTable facilities={reported} />
+      <Panel title={`All BTM facilities (${btmTrue.length}) — ranked by on-site generation`}>
+        <p className="mb-2 max-w-3xl text-[13px] text-fg-muted">
+          Every facility with on-site power in one list. The{" "}
+          <span className="text-fg">Evidence</span> column is the key:{" "}
+          <span className="font-mono text-[11px]">confirmed</span> means primary
+          documents (permits, regulatory filings, EIA records);{" "}
+          <span className="font-mono text-[11px]">reported</span> means credible
+          journalism or company statements we could not yet verify against a
+          primary document. Both are real entries — they differ in proof, and we
+          never merge them in the counts above.
+        </p>
+        <BtmTable facilities={btmTrue} />
       </Panel>
 
       <Panel title="Coverage caveat">
@@ -152,7 +166,16 @@ export default function BehindTheMeterPage() {
           dataset, {k.operating} operating). MW sums count only facilities with
           a known on-site generation figure; facilities with BTM = yes but
           unknown MW are listed with a dash and excluded from sums. These
-          figures describe this curated dataset — not the U.S. fleet.
+          figures describe this curated dataset — not the U.S. fleet. Evidence
+          standards:{" "}
+          <Link href="/methodology" className="underline hover:text-fg">
+            methodology
+          </Link>
+          . New to the topic? Start with{" "}
+          <Link href="/learn" className="underline hover:text-fg">
+            Data Centers 101
+          </Link>
+          .
         </p>
       </Panel>
     </div>

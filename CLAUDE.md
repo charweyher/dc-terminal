@@ -60,6 +60,7 @@ All data lives in `data/facilities.json` — the curated inventory. The sample f
 | Route | Purpose |
 |-------|---------|
 | `/` | Terminal home: brand, thesis, KPI strip, map preview, largest operating/planned |
+| `/learn` | Data Centers 101 — plain-language educational primer (balanced benefits + impacts, sourced) |
 | `/map` | Full interactive map + filters (status, BTM, water-known, state) |
 | `/facilities` | Dense Bloomberg-style table + search/filters |
 | `/facilities/[id]` | Facility detail (or drawer + shareable route) |

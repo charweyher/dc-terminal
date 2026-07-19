@@ -36,6 +36,39 @@ export default function WaterPage() {
     <div className="flex flex-col gap-3 pt-6">
       <h1 className="font-sans text-xl font-semibold tracking-wide">Water</h1>
 
+      <Panel title="How data centers use water — the three numbers">
+        <div className="max-w-3xl space-y-2 text-[13px] text-fg-muted">
+          <p>
+            Servers make heat; cooling removes it. Some designs evaporate water
+            to shed that heat (cooling towers), some use closed loops or air
+            and consume very little. Three metrics describe this:
+          </p>
+          <ul className="list-disc space-y-1 pl-5">
+            <li>
+              <span className="text-fg">Withdrawal (MGD)</span> — millions of
+              gallons per day taken in from a utility, river, or wells.
+            </li>
+            <li>
+              <span className="text-fg">Consumption (MGD)</span> — the part
+              that evaporates and doesn&apos;t return to the local water
+              system. Always ≤ withdrawal; the difference is discharged back.
+            </li>
+            <li>
+              <span className="text-fg">WUE (L/kWh)</span> — water use
+              effectiveness: liters of water per kilowatt-hour of IT energy.
+              Lets you compare facilities of different sizes; lower is better,
+              and air-cooled sites can approach zero.
+            </li>
+          </ul>
+          <p>
+            Water use varies enormously with cooling design and climate — two
+            campuses of identical power draw can differ by 10× or more. That
+            is why we never estimate a facility&apos;s water from its size:
+            a number here is a published number or it is unknown.
+          </p>
+        </div>
+      </Panel>
+
       <div className="panel-in grid grid-cols-2 rounded-[2px] border border-hairline bg-bg-1 md:grid-cols-3 lg:divide-x lg:divide-hairline">
         <KpiCell
           label="Water coverage"
@@ -56,7 +89,10 @@ export default function WaterPage() {
 
       <Panel title="The gap, plainly">
         <p className="max-w-3xl text-[13px] text-fg-muted">
-          Most data centers do not publish facility-level water figures.{" "}
+          Most data centers do not publish facility-level water figures — many
+          operators treat them as confidential, and the best numbers often
+          surface only through public-records requests (Google&apos;s The
+          Dalles figures below became public through litigation).{" "}
           {k.total - k.water_any_known_count} of {k.total} facilities in this
           dataset have no public water metric, and we leave them as unknown
           rather than estimating. Sums above cover only the facilities listed
@@ -64,7 +100,11 @@ export default function WaterPage() {
           <Link href="/methodology" className="underline hover:text-fg">
             methodology
           </Link>{" "}
-          for how figures are sourced.
+          for how figures are sourced, or{" "}
+          <Link href="/learn" className="underline hover:text-fg">
+            Data Centers 101
+          </Link>{" "}
+          for the basics.
         </p>
       </Panel>
 
