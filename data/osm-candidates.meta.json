@@ -1,11 +1,11 @@
 {
-  "count": 1556,
-  "fetched_at": "2026-07-18T23:56:12.440Z",
-  "built_at": "2026-07-18T23:56:12.613Z",
+  "count": 1415,
+  "fetched_at": "2026-07-19T01:03:20.880Z",
+  "built_at": "2026-07-19T01:03:21.043Z",
   "source_id": "osm-overpass-datacenters",
   "license": "ODbL — © OpenStreetMap contributors",
   "dropped": {
     "non_us": 75,
-    "near_curated": 157
+    "near_curated": 156
   }
 }

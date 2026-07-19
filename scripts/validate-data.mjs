@@ -135,6 +135,17 @@ function validateFile(file) {
       }
     }
 
+    // BTM=true should carry a definite evidence tier; "estimated" is
+    // allowed but flagged so the curator picks confirmed vs reported.
+    if (
+      f.power?.behind_the_meter?.value === true &&
+      f.power?.behind_the_meter?.confidence === "estimated"
+    ) {
+      warnings.push(
+        `${fid}: behind_the_meter=true with confidence=estimated — prefer confirmed or reported`
+      );
+    }
+
     if (
       f.power?.behind_the_meter?.value === true &&
       !["behind_the_meter", "hybrid"].includes(f.power?.grid_interconnect?.value)

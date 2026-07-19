@@ -58,7 +58,9 @@ export function computeKpis(facilities: Facility[]): DatasetKpis {
       if (btm.value === true && btm.confidence === "confirmed") {
         kpis.btm_confirmed_count++;
         kpis.btm_confirmed_mw += btmMw(f) ?? 0;
-      } else if (btm.value === true && btm.confidence === "reported") {
+      } else if (btm.value === true) {
+        // Everything non-confirmed (reported, estimated) lands here so a
+        // BTM=true row can never appear in the table but in neither KPI.
         kpis.btm_reported_count++;
         kpis.btm_reported_mw += btmMw(f) ?? 0;
       }
