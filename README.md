@@ -19,8 +19,8 @@ Other scripts:
 
 ```bash
 npm run validate:data  # schema checks on data/facilities.json — run after any data edit
-npm run build          # production build (must pass before shipping/committing a phase)
-npm run start          # serve the production build
+npm run build          # static export to out/ (must pass before shipping/committing a phase)
+npm run start          # serve out/ locally on :3000
 npm run lint           # eslint
 npm run ingest:overpass  # pull US data-center candidates from OpenStreetMap → data/raw/ staging
 npm run ingest:eia       # (needs free EIA_API_KEY) BTM generator candidates → data/raw/ staging
@@ -29,6 +29,28 @@ npm run ingest:eia       # (needs free EIA_API_KEY) BTM generator candidates →
 Ingest scripts stage candidates for **human curation** — they never write `data/facilities.json` directly. See [`scripts/ingest/README.md`](scripts/ingest/README.md).
 
 No API keys are required. The map uses CARTO's free "Dark Matter" basemap (style URL documented in `components/FacilityMap.tsx`) with a US-states layer (Census-derived GeoJSON in `public/us-states.geojson`) drawn on top: crisp state borders + code labels at national zoom, hover highlight, and click-through to `/states/[code]`. Attribution to © CARTO / © OpenStreetMap contributors is rendered by the map control and must stay visible. For high-traffic production use, plan to self-host tiles or license a provider.
+
+## Deploy (Cloudflare Pages)
+
+The site is a static export (`output: "export"` in `next.config.ts`): every route is prerendered from `data/*.json`, so there is no server runtime. Cloudflare Pages builds and serves it from GitHub on every push.
+
+Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git → `charweyher/dc-terminal`:
+
+| Setting | Value |
+|---|---|
+| Production branch | `master` |
+| Framework preset | Next.js (Static HTML Export) |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Node version | from `.node-version` (22) |
+
+Environment variables (Settings → Variables and Secrets; all are inlined at build time, so redeploy after changing them). See `.env.example`:
+
+- `NEXT_PUBLIC_SITE_URL`: the live URL (`https://<project>.pages.dev` or your domain), used by the sitemap, robots.txt and Open Graph tags.
+- `NEXT_PUBLIC_BEEHIIV_EMBED_URL`: beehiiv subscribe-form iframe `src`. The signup block stays hidden until this or `NEXT_PUBLIC_NEWSLETTER_URL` is set.
+- `NEXT_PUBLIC_CONTACT_EMAIL` (optional): shown in the footer.
+
+Branches other than `master` get preview URLs automatically.
 
 ## Routes
 

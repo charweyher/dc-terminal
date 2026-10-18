@@ -49,7 +49,7 @@ UX north star: [Cleanview US Data Centers](https://cleanview.co/data-centers/us)
 | Map | MapLibre GL + free basemap (no paid map key required for MVP) |
 | Charts | Recharts (or equivalent) in terminal styling |
 | Data (MVP) | Versioned JSON under `data/` + typed loaders; aggregates in TypeScript |
-| Hosting | Vercel-ready |
+| Hosting | Static export (`output: "export"`) on Cloudflare Pages; no server runtime, so every route must prerender. Deploy steps are in README "Deploy" |
 
 All data lives in `data/facilities.json` — the curated inventory. The sample fixture has been removed at the owner's request: no hypothetical/sample rows anywhere in the repo. Every row must be real and sourced.
 

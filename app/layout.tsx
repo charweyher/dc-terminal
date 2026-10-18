@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import TopBar from "@/components/TopBar";
+import SiteFooter from "@/components/SiteFooter";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const plexSans = IBM_Plex_Sans({
@@ -16,9 +18,16 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "DC Terminal — US Data Center Intelligence",
-  description:
-    "US data center inventory — operating, planned, behind-the-meter power, and water, with sourced data and honest coverage disclosure.",
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    siteName: SITE_NAME,
+    type: "website",
+    title: "DC Terminal — US Data Center Intelligence",
+    description: SITE_DESCRIPTION,
+  },
+  twitter: { card: "summary" },
 };
 
 export default function RootLayout({
@@ -33,6 +42,7 @@ export default function RootLayout({
       >
         <TopBar />
         <main className="mx-auto max-w-[1440px] px-4 pb-16">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );

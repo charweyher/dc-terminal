@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Panel from "@/components/Panel";
 import KpiCell from "@/components/KpiCell";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import { NEWSLETTER_ENABLED } from "@/lib/site";
 import FacilityMap from "@/components/FacilityMap";
 import MapLegend from "@/components/MapLegend";
 import RankedFacilityTable, {
@@ -85,6 +87,12 @@ export default function Home() {
           <KpiCell key={kpi.label} {...kpi} />
         ))}
       </div>
+
+      {NEWSLETTER_ENABLED ? (
+        <Panel>
+          <NewsletterSignup />
+        </Panel>
+      ) : null}
 
       <Panel title="US Map">
         <div className="flex flex-col gap-2">
