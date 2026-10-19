@@ -55,3 +55,16 @@
   - `digital-realty-iad39-va`, `msft-fairwater-atl-b2-ga`/`-b4-ga`: untraceable MW and opening year → unknown; IAD39 moved to OSM parcel coords; Fairwater rows add AJC's Fayetteville reporting.
   - `google-council-bluffs-ia`: OSM parcel coords; fixture-only grid/BTM/cooling → unknown. `xai-colossus-1-tn`: fixture citation dropped (value kept on `xai-colossus-press`) and notes reworded.
 - 21 new sources; `sample-schema-fixture` and the now-uncited `equinix-sustainability-2025` removed. `facilities.json` wrapper description no longer calls the dataset a sample fixture.
+
+## 0.4.1 — 2026-10-18
+
+- `xai-colossus-1-tn`: **coordinates corrected** from a point ~17 km east (35.0456, −89.9711) to the OSM "xAI Colossus" building (way/1381264361, 35.05995, −90.15638), precision `parcel`. The OSM address tag (3231 Paul R. Lowry Road) matches MLGW's May 2025 utility update (former Electrolux plant, Frank C. Pidgeon Industrial Park) and Commercial Property Executive's May 2026 sale report.
+  - The vague `xai-colossus-press` source (a publisher homepage) is retired. The 300 MW `it_load_mw` stays `reported` but now cites MLGW (150 MW energized, second 150 MW increment requested for 300 MW total), Tom's Hardware (May 2025) and WSMV (TVA approved another 150 MW, Feb 2026, site not named). Notes say it is grid electric service, not measured IT load.
+  - `year_operational` 2025 → 2024: the cluster first switched on in July 2024 (Tom's Hardware). BTM stays `reported`, now citing the Shelby County Health Department turbine permit (Action News 5, July 2025). Grid supply is corroborated by MLGW.
+- `msft-fairwater-atl-b2-ga` + `msft-fairwater-atl-b4-ga` **merged** into `msft-fairwater-atlanta-ga`, **Microsoft Fairwater Atlanta (QTS Fayetteville campus)**, `operating`. The per-building split followed a commercial tracker's row structure, and Microsoft discloses no per-building figures.
+  - Coordinates: centroid of the four OSM-mapped QTS buildings on the campus, precision `county` → `parcel`. AJC open-records reporting places Fairwater there.
+  - Opened October 2025 and closed-loop liquid cooling, both `confirmed` from Microsoft's own launch feature.
+  - IT load 636 MW `estimated` from Epoch AI's satellite-based Frontier Data Centers Hub (CC BY 4.0). Microsoft has published no capacity.
+  - 43 → 42 facilities. Planned count drops 2 → 1 because Building 4, the old `planned` row, is operational per Epoch (June 2026). Operating MW now includes the 636 MW estimate.
+- `microsoft-fairwater-announcements` (url null) is retired, replaced by `microsoft-fairwater-atlanta-launch` (Microsoft Source, Nov 2025). New sources: `mlgw-xai-utility-update-2025-05`, `cpe-colossus-1-sale-2026`, `toms-hardware-colossus-phase1-2025`, `wsmv-tva-xai-power-2026-02`, `actionnews5-xai-turbine-permit-2025`, `microsoft-fairwater-atlanta-launch`, `epoch-fairwater-atlanta`.
+- OSM candidate layer rebuilt (`npm run build:candidates`; 1,415 → 1,290 points). The now-curated Colossus and QTS Fayetteville points no longer double-plot. The rebuild also catches up 0.4.0's coordinate moves, which never reached the layer: 131 points near IAD39, DC12, Vantage Quincy, Council Bluffs, EdgeCore Mesa and Stream Phoenix are now hidden. Nine Quincy, WA points near Vantage's old position reappear, among them CyrusOne Quincy and NTT Data Quincy.

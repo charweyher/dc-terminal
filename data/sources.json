@@ -56,6 +56,51 @@
       "kind": "news"
     },
     {
+      "id": "mlgw-xai-utility-update-2025-05",
+      "title": "MLGW update on utility support for xAI \u2014 May 5, 2025",
+      "publisher": "Memphis Light, Gas and Water Division (MLGW)",
+      "url": "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf",
+      "accessed_at": "2026-10-18",
+      "license_notes": "Municipal utility public statement. Places xAI at the former Electrolux plant on Paul Lowry Rd (Frank C. Pidgeon Industrial Park); 150 MW grid service energized, second 150 MW increment (300 MW total) pending TVA approval.",
+      "kind": "government"
+    },
+    {
+      "id": "cpe-colossus-1-sale-2026",
+      "title": "SpaceX Pays $185M for Memphis Data Center \u2014 May 2026",
+      "publisher": "Commercial Property Executive",
+      "url": "https://www.commercialsearch.com/news/spacex-pays-185m-in-memphis-for-first-xai-data-center/",
+      "accessed_at": "2026-10-18",
+      "license_notes": "Trade press; gives the Colossus I site address (3231 Paul R. Lowry Road) and 217-acre parcel.",
+      "kind": "news"
+    },
+    {
+      "id": "toms-hardware-colossus-phase1-2025",
+      "title": "Musk's Colossus is fully operational with 200,000 GPUs backed by Tesla batteries \u2014 Phase 2 to consume 300 MW \u2014 May 2025",
+      "publisher": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/musks-colossus-is-fully-operational-with-200-000-gpus-backed-by-tesla-batteries-phase-2-to-consume-300-mw-enough-to-power-300-000-homes",
+      "accessed_at": "2026-10-18",
+      "license_notes": "Secondary journalism citing the Greater Memphis Chamber: 150 MW grid supply, second 150 MW substation expected fall 2025 (300 MW total); cluster first switched on July 2024; gas turbines retained for phase 2.",
+      "kind": "news"
+    },
+    {
+      "id": "wsmv-tva-xai-power-2026-02",
+      "title": "TVA approves power increase for xAI \u2014 Feb 2026",
+      "publisher": "WSMV 4",
+      "url": "https://www.wsmv.com/2026/02/12/tva-approves-power-increase-xai/",
+      "accessed_at": "2026-10-18",
+      "license_notes": "Local news: TVA board approved an additional 150 MW of firm power for xAI as an MLGW customer; the article does not name the site.",
+      "kind": "news"
+    },
+    {
+      "id": "actionnews5-xai-turbine-permit-2025",
+      "title": "Health dept. grants permit for xAI turbines \u2014 Jul 2025",
+      "publisher": "Action News 5 (WMC)",
+      "url": "https://www.actionnews5.com/2025/07/02/health-dept-grants-permit-xai-turbines/",
+      "accessed_at": "2026-10-18",
+      "license_notes": "Local news on the Shelby County Health Department air permit for 15 permanent gas turbines at xAI's Memphis site; the permit document itself is not yet registered in-repo.",
+      "kind": "news"
+    },
+    {
       "id": "google-env-report-2025",
       "title": "Google environmental / data center water disclosures",
       "publisher": "Google",
@@ -63,24 +108,6 @@
       "accessed_at": "2026-07-18",
       "license_notes": "Corporate disclosure; site-level figures only when explicitly published.",
       "kind": "corporate"
-    },
-    {
-      "id": "xai-colossus-press",
-      "title": "Public reporting on xAI Colossus Memphis campus and on-site generation",
-      "publisher": "Multiple news outlets / company statements",
-      "url": "https://www.nsenergybusiness.com/",
-      "accessed_at": "2026-07-18",
-      "license_notes": "Sample row uses reported confidence pending permit/EIA corroboration in curated updates.",
-      "kind": "news"
-    },
-    {
-      "id": "microsoft-fairwater-announcements",
-      "title": "Public announcements on Microsoft Fairwater Atlanta / QTS Georgia campus",
-      "publisher": "Company and regional press",
-      "url": null,
-      "accessed_at": "2026-07-18",
-      "license_notes": "Sample planned/operating capacity marked reported.",
-      "kind": "news"
     },
     {
       "id": "digital-realty-iad-disclosures",
@@ -306,6 +333,24 @@
       "accessed_at": "2026-10-18",
       "license_notes": null,
       "kind": "news"
+    },
+    {
+      "id": "microsoft-fairwater-atlanta-launch",
+      "title": "From Wisconsin to Atlanta: Microsoft connects datacenters to build its first AI superfactory \u2014 Nov 2025",
+      "publisher": "Microsoft (Microsoft Source)",
+      "url": "https://news.microsoft.com/source/features/ai/from-wisconsin-to-atlanta-microsoft-connects-datacenters-to-build-its-first-ai-superfactory/",
+      "accessed_at": "2026-10-18",
+      "license_notes": "Official company feature: the Atlanta Fairwater site began operation in October 2025 and uses closed-loop liquid cooling. Gives no MW figure or street location.",
+      "kind": "corporate"
+    },
+    {
+      "id": "epoch-fairwater-atlanta",
+      "title": "Microsoft Fairwater Atlanta \u2014 Frontier Data Centers Hub (updated Jul 17, 2026)",
+      "publisher": "Epoch AI",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/microsoft-fairwater-atlanta",
+      "accessed_at": "2026-10-18",
+      "license_notes": "CC BY 4.0 \u2014 Epoch AI. Model-based estimate (satellite imagery plus a cooling-equipment power model), not a company disclosure; cite as estimated only.",
+      "kind": "ngo"
     },
     {
       "id": "iren-childress-page",

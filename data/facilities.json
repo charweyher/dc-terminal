@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "generated_at": "2026-10-18T00:00:00Z",
   "description": "DC Terminal curated US data center inventory. Public aggregation with per-field confidence and source IDs; not a national census.",
   "facilities": [
@@ -8,7 +8,8 @@
       "name": "xAI Colossus 1",
       "aliases": [
         "Colossus",
-        "Memphis Colossus"
+        "Memphis Colossus",
+        "Memphis Supercluster"
       ],
       "operator": "xAI",
       "developer": "xAI",
@@ -16,21 +17,24 @@
       "status": "operating",
       "location": {
         "lat": {
-          "value": 35.0456,
+          "value": 35.05995,
           "confidence": "reported",
           "source_ids": [
-            "xai-colossus-press",
-            "distilled-btm-2026"
+            "osm-overpass-datacenters",
+            "mlgw-xai-utility-update-2025-05",
+            "cpe-colossus-1-sale-2026"
           ],
-          "as_of": "2026-01-15"
+          "as_of": "2026-10-18"
         },
         "lng": {
-          "value": -89.9711,
+          "value": -90.15638,
           "confidence": "reported",
           "source_ids": [
-            "xai-colossus-press"
+            "osm-overpass-datacenters",
+            "mlgw-xai-utility-update-2025-05",
+            "cpe-colossus-1-sale-2026"
           ],
-          "as_of": "2026-01-15"
+          "as_of": "2026-10-18"
         },
         "state": "TN",
         "county": "Shelby",
@@ -42,9 +46,11 @@
           "value": 300,
           "confidence": "reported",
           "source_ids": [
-            "xai-colossus-press"
+            "mlgw-xai-utility-update-2025-05",
+            "toms-hardware-colossus-phase1-2025",
+            "wsmv-tva-xai-power-2026-02"
           ],
-          "as_of": "2025-12-01"
+          "as_of": "2026-02-12"
         },
         "critical_load_mw": {
           "value": null,
@@ -53,12 +59,12 @@
           "as_of": null
         },
         "year_operational": {
-          "value": 2025,
+          "value": 2024,
           "confidence": "reported",
           "source_ids": [
-            "xai-colossus-press"
+            "toms-hardware-colossus-phase1-2025"
           ],
-          "as_of": "2025-12-01"
+          "as_of": "2025-05-08"
         },
         "expected_year": {
           "value": null,
@@ -72,6 +78,7 @@
           "value": "hybrid",
           "confidence": "reported",
           "source_ids": [
+            "mlgw-xai-utility-update-2025-05",
             "distilled-btm-2026"
           ],
           "as_of": "2026-01-15"
@@ -81,7 +88,8 @@
           "confidence": "reported",
           "source_ids": [
             "distilled-btm-2026",
-            "xai-colossus-press"
+            "toms-hardware-colossus-phase1-2025",
+            "actionnews5-xai-turbine-permit-2025"
           ],
           "as_of": "2026-01-15"
         },
@@ -124,11 +132,16 @@
         }
       },
       "source_ids": [
-        "xai-colossus-press",
+        "osm-overpass-datacenters",
+        "mlgw-xai-utility-update-2025-05",
+        "cpe-colossus-1-sale-2026",
+        "toms-hardware-colossus-phase1-2025",
+        "wsmv-tva-xai-power-2026-02",
+        "actionnews5-xai-turbine-permit-2025",
         "distilled-btm-2026"
       ],
       "last_reviewed": "2026-10-18",
-      "notes": "On-site generation (1,500 MW) is Distilled's figure for mobile gas turbines serving Colossus 1 and 2 combined, not Colossus 1 alone; corroborate with permits/EIA before elevating to confirmed."
+      "notes": "Former Electrolux plant at 3231 Paul R. Lowry Road, Frank C. Pidgeon Industrial Park, southwest Memphis (OSM way/1381264361; address per MLGW and Commercial Property Executive). Coordinates corrected in 0.4.1 from a point ~17 km east. The 300 MW figure is MLGW/TVA grid electric service, not measured IT load: MLGW's May 2025 update had 150 MW energized and a second 150 MW increment (300 MW total) pending TVA approval, and TVA approved a further 150 MW of firm power for xAI in Feb 2026 (WSMV does not name the site). Kept reported until a primary document confirms the second increment is energized here. The cluster first switched on in July 2024. Shelby County Health Department permitted 15 permanent gas turbines in July 2025. On-site generation (1,500 MW) is Distilled's figure for mobile gas turbines serving Colossus 1 and 2 combined, not Colossus 1 alone; corroborate with permits/EIA before elevating to confirmed."
     },
     {
       "id": "digital-realty-iad39-va",
@@ -245,10 +258,13 @@
       "notes": "Digital Realty Northern Virginia IAD39 in Ashburn (OSM way/701923203). Capacity and opening year are unknown: earlier figures could not be traced to a Digital Realty disclosure and were removed."
     },
     {
-      "id": "msft-fairwater-atl-b2-ga",
-      "name": "Microsoft Fairwater Atlanta \u2014 Building 2",
+      "id": "msft-fairwater-atlanta-ga",
+      "name": "Microsoft Fairwater Atlanta (QTS Fayetteville campus)",
       "aliases": [
-        "Fairwater Atlanta B2"
+        "Fairwater Atlanta",
+        "Fairwater 2",
+        "Microsoft AI superfactory (Atlanta)",
+        "QTS Fayetteville"
       ],
       "operator": "Microsoft",
       "developer": "QTS",
@@ -256,19 +272,19 @@
       "status": "operating",
       "location": {
         "lat": {
-          "value": 33.4487,
-          "confidence": "estimated",
+          "value": 33.45639,
+          "confidence": "reported",
           "source_ids": [
-            "microsoft-fairwater-announcements",
+            "osm-overpass-datacenters",
             "ajc-fairwater-fayetteville"
           ],
           "as_of": "2026-10-18"
         },
         "lng": {
-          "value": -84.4952,
-          "confidence": "estimated",
+          "value": -84.52474,
+          "confidence": "reported",
           "source_ids": [
-            "microsoft-fairwater-announcements",
+            "osm-overpass-datacenters",
             "ajc-fairwater-fayetteville"
           ],
           "as_of": "2026-10-18"
@@ -276,14 +292,16 @@
         "state": "GA",
         "county": "Fayette",
         "city": "Fayetteville",
-        "precision": "county"
+        "precision": "parcel"
       },
       "capacity": {
         "it_load_mw": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
+          "value": 636,
+          "confidence": "estimated",
+          "source_ids": [
+            "epoch-fairwater-atlanta"
+          ],
+          "as_of": "2026-07-17"
         },
         "critical_load_mw": {
           "value": null,
@@ -293,11 +311,12 @@
         },
         "year_operational": {
           "value": 2025,
-          "confidence": "reported",
+          "confidence": "confirmed",
           "source_ids": [
-            "microsoft-fairwater-announcements"
+            "microsoft-fairwater-atlanta-launch",
+            "ajc-fairwater-fayetteville"
           ],
-          "as_of": "2026-07-18"
+          "as_of": "2025-11-12"
         },
         "expected_year": {
           "value": null,
@@ -348,135 +367,21 @@
         },
         "cooling_type": {
           "value": "liquid",
-          "confidence": "reported",
+          "confidence": "confirmed",
           "source_ids": [
-            "microsoft-fairwater-announcements"
+            "microsoft-fairwater-atlanta-launch"
           ],
-          "as_of": "2026-07-18"
+          "as_of": "2025-11-12"
         }
       },
       "source_ids": [
-        "microsoft-fairwater-announcements",
-        "ajc-fairwater-fayetteville"
+        "microsoft-fairwater-atlanta-launch",
+        "ajc-fairwater-fayetteville",
+        "osm-overpass-datacenters",
+        "epoch-fairwater-atlanta"
       ],
       "last_reviewed": "2026-10-18",
-      "notes": "Cooling type reported from public AI campus coverage; water volumes unknown. Microsoft has not disclosed capacity, so per-building MW is unknown (earlier unsourced figures removed). AJC public-records reporting places Fairwater Atlanta within QTS's 615-acre Fayetteville campus; Microsoft and QTS decline to confirm. County-level coordinates."
-    },
-    {
-      "id": "msft-fairwater-atl-b4-ga",
-      "name": "Microsoft Fairwater Atlanta \u2014 Building 4",
-      "aliases": [
-        "Fairwater Atlanta B4"
-      ],
-      "operator": "Microsoft",
-      "developer": "QTS",
-      "facility_type": "hyperscale",
-      "status": "planned",
-      "location": {
-        "lat": {
-          "value": 33.45,
-          "confidence": "estimated",
-          "source_ids": [
-            "microsoft-fairwater-announcements",
-            "ajc-fairwater-fayetteville"
-          ],
-          "as_of": "2026-10-18"
-        },
-        "lng": {
-          "value": -84.5,
-          "confidence": "estimated",
-          "source_ids": [
-            "microsoft-fairwater-announcements",
-            "ajc-fairwater-fayetteville"
-          ],
-          "as_of": "2026-10-18"
-        },
-        "state": "GA",
-        "county": "Fayette",
-        "city": "Fayetteville",
-        "precision": "county"
-      },
-      "capacity": {
-        "it_load_mw": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "critical_load_mw": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "year_operational": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "expected_year": {
-          "value": 2026,
-          "confidence": "reported",
-          "source_ids": [
-            "microsoft-fairwater-announcements"
-          ],
-          "as_of": "2026-07-18"
-        }
-      },
-      "power": {
-        "grid_interconnect": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "behind_the_meter": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "onsite_generation_mw": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "fuel_types": []
-      },
-      "water": {
-        "withdrawal_mgd": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "consumption_mgd": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "wue_l_per_kwh": {
-          "value": null,
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        },
-        "cooling_type": {
-          "value": "unknown",
-          "confidence": "unknown",
-          "source_ids": [],
-          "as_of": null
-        }
-      },
-      "source_ids": [
-        "microsoft-fairwater-announcements",
-        "ajc-fairwater-fayetteville"
-      ],
-      "last_reviewed": "2026-10-18",
-      "notes": "Microsoft has not disclosed capacity, so per-building MW is unknown (earlier unsourced figures removed). AJC public-records reporting places Fairwater Atlanta within QTS's 615-acre Fayetteville campus; Microsoft and QTS decline to confirm. County-level coordinates."
+      "notes": "One campus row (0.4.1) replacing the per-building rows msft-fairwater-atl-b2-ga and msft-fairwater-atl-b4-ga. Microsoft says the Atlanta Fairwater site began operation in October 2025 but gives no location; AJC open-records reporting places it within QTS's 615-acre Fayetteville campus. Coordinates are the centroid of four OSM-mapped QTS buildings there (ways 1472128597, 1472128598, 1510517635, 1510517636); which buildings Microsoft occupies is not public. IT load (636 MW) is Epoch AI's satellite-based estimate for the Microsoft buildings (all four operational as of June 2026), not a Microsoft disclosure; Microsoft has not published capacity. Epoch also sees two more building shells on the campus with an unknown tenant. Closed-loop liquid cooling per Microsoft; water volumes unknown (Microsoft gives only a qualitative initial-fill comparison)."
     },
     {
       "id": "iren-childress-tx",
