@@ -8,9 +8,17 @@ import MapLegend from "@/components/MapLegend";
 import RankedFacilityTable, {
   rankByKnownMw,
 } from "@/components/RankedFacilityTable";
+import DataWire from "@/components/DataWire";
+import Ledger from "@/components/Ledger";
+import ChartTooltip from "@/components/charts/ChartTooltip";
+import PhaseBars from "@/components/charts/PhaseBars";
+import PhaseLegend from "@/components/charts/PhaseLegend";
+import YearColumns from "@/components/charts/YearColumns";
 import { loadFacilities } from "@/lib/data";
 import { computeKpis } from "@/lib/kpis";
 import { toMapData } from "@/lib/mapPoints";
+import { countByPhase, FACILITY_TYPE_LABEL, splitTail, yearBins } from "@/lib/rollups";
+import { STATE_NAMES } from "@/lib/states";
 
 const fmt = new Intl.NumberFormat("en-US");
 
@@ -18,6 +26,25 @@ export default function Home() {
   const facilities = loadFacilities();
   const k = computeKpis(facilities);
   const mapData = toMapData(facilities);
+
+  const byState = splitTail(
+    countByPhase(
+      facilities,
+      (f) => f.location.state,
+      (code) => STATE_NAMES[code] ?? code,
+      (code) => `/states/${code.toLowerCase()}`
+    )
+  );
+  const byOperator = splitTail(
+    countByPhase(facilities, (f) => f.operator ?? "Undisclosed")
+  );
+  const byType = countByPhase(
+    facilities,
+    (f) => f.facility_type,
+    (t) => FACILITY_TYPE_LABEL[t as keyof typeof FACILITY_TYPE_LABEL] ?? t
+  );
+  const years = yearBins(facilities, new Date().getUTCFullYear());
+  const active = k.total - k.cancelled;
   const topOperating = rankByKnownMw(
     facilities.filter((f) => f.status === "operating"),
     5
@@ -94,19 +121,88 @@ export default function Home() {
         </Panel>
       ) : null}
 
-      <Panel title="US Map">
-        <div className="flex flex-col gap-2">
-          <FacilityMap points={mapData.points} heightClass="h-[420px]" />
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <MapLegend unmappedCount={mapData.unmappedCount} />
-            <Link
-              href="/map"
-              className="font-mono text-[11px] text-fg-muted underline hover:text-fg"
-            >
-              Open full map + filters →
-            </Link>
+      <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_340px]">
+        <Panel title="US Map">
+          <div className="flex flex-col gap-2">
+            <FacilityMap points={mapData.points} heightClass="h-[460px]" cooperativeGestures />
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <MapLegend unmappedCount={mapData.unmappedCount} />
+              <Link
+                href="/map"
+                className="font-mono text-[11px] text-fg-muted underline hover:text-fg"
+              >
+                Open full map + filters →
+              </Link>
+            </div>
           </div>
+        </Panel>
+        <Panel title="Data wire">
+          <DataWire limit={5} />
+        </Panel>
+      </div>
+
+      <Panel title="Breakdown">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <PhaseLegend />
+            <span className="text-[12px] text-fg-dim">
+              {active} active facilities
+              {k.cancelled > 0 ? ` · ${k.cancelled} cancelled project excluded` : ""}
+            </span>
+          </div>
+          <ChartTooltip className="grid gap-x-10 gap-y-6 md:grid-cols-2">
+            <section>
+              <h2 className="text-[13px] font-medium text-fg">Where they are</h2>
+              <p className="mb-2 text-[12px] text-fg-dim">States with two or more facilities</p>
+              <PhaseBars rows={byState.head} caption="Facilities by state, operating vs pipeline" />
+              {byState.tail.length > 0 ? (
+                <p className="mt-2 text-[12px] text-fg-dim">
+                  One each in{" "}
+                  {byState.tail.map((r, i) => (
+                    <span key={r.key}>
+                      {i > 0 ? ", " : ""}
+                      <Link href={r.href ?? "#"} className="text-fg-muted hover:text-fg hover:underline">
+                        {r.label}
+                      </Link>
+                    </span>
+                  ))}
+                  .
+                </p>
+              ) : null}
+            </section>
+            <section>
+              <h2 className="text-[13px] font-medium text-fg">Who runs them</h2>
+              <p className="mb-2 text-[12px] text-fg-dim">Operators with two or more facilities</p>
+              <PhaseBars rows={byOperator.head} caption="Facilities by operator, operating vs pipeline" />
+              {byOperator.tail.length > 0 ? (
+                <p className="mt-2 text-[12px] text-fg-dim">
+                  {byOperator.tail.length} more operators run one facility each:{" "}
+                  <span className="text-fg-muted">
+                    {byOperator.tail.map((r) => r.label).join(", ")}
+                  </span>
+                  .
+                </p>
+              ) : null}
+            </section>
+            <section>
+              <h2 className="text-[13px] font-medium text-fg">What they&apos;re for</h2>
+              <p className="mb-2 text-[12px] text-fg-dim">Facilities by type</p>
+              <PhaseBars rows={byType} caption="Facilities by type, operating vs pipeline" />
+            </section>
+            <section>
+              <h2 className="text-[13px] font-medium text-fg">When they come online</h2>
+              <p className="mb-2 text-[12px] text-fg-dim">
+                Year online for {years.operatingKnown} of {years.operatingTotal} operating · expected
+                year for {years.pipelineKnown} of {years.pipelineTotal} in the pipeline
+              </p>
+              <YearColumns bins={years.bins} caption="Facilities by year online or expected" />
+            </section>
+          </ChartTooltip>
         </div>
+      </Panel>
+
+      <Panel title="Source ledger">
+        <Ledger facilities={facilities} />
       </Panel>
 
       <div className="grid gap-3 md:grid-cols-2">

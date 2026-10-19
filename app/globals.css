@@ -17,6 +17,15 @@
   --accent-danger: #ef4444;
   --accent-water: #38bdf8;     /* sky */
 
+  /* Chart marks (validated for the dark panel surface: band, chroma, CVD, contrast) */
+  --chart-operating: #3b82f6;
+  --chart-pipeline: #d97706;   /* planned + under construction */
+
+  /* Confidence ramp: one hue, light = more certain (validated as ordinal). Unknown = empty cell. */
+  --conf-confirmed: #dbe4ee;
+  --conf-reported: #7d8ea5;
+  --conf-estimated: #3d4b5e;
+
   --mono: var(--font-plex-mono), "JetBrains Mono", "SF Mono", ui-monospace, monospace;
   --sans: var(--font-plex-sans), "Source Sans 3", "Helvetica Neue", sans-serif;
 }
@@ -35,6 +44,11 @@
   --color-btm: var(--accent-btm);
   --color-danger: var(--accent-danger);
   --color-water: var(--accent-water);
+  --color-chart-operating: var(--chart-operating);
+  --color-chart-pipeline: var(--chart-pipeline);
+  --color-conf-confirmed: var(--conf-confirmed);
+  --color-conf-reported: var(--conf-reported);
+  --color-conf-estimated: var(--conf-estimated);
   --font-mono: var(--mono);
   --font-sans: var(--sans);
 }
@@ -75,4 +89,33 @@ body {
   .panel-in {
     animation: none;
   }
+}
+
+/* ---------- Ledger: sourced-facts matrix ---------- */
+.ledger-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+.ledger-cell[data-c="confirmed"] { background: var(--conf-confirmed); box-shadow: none; }
+.ledger-cell[data-c="reported"]  { background: var(--conf-reported);  box-shadow: none; }
+.ledger-cell[data-c="estimated"] { background: var(--conf-estimated); box-shadow: none; }
+
+.ledger-col:hover .ledger-cell,
+.ledger-col:focus-visible .ledger-cell {
+  outline: 1px solid var(--border-strong);
+  outline-offset: 1px;
+}
+
+/* The one orchestrated moment: on first scroll-in, columns light up left to right.
+   LedgerReveal arms this only when the ledger starts below the fold and motion is allowed. */
+[data-ledger="armed"] .ledger-cell {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+[data-ledger="play"] .ledger-cell {
+  transition: background-color 320ms ease-out, box-shadow 320ms ease-out;
+  transition-delay: calc(var(--i, 0) * 14ms);
 }

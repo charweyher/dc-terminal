@@ -128,3 +128,14 @@ Terse, factual, terminal-like. Prefer:
 `Operating 12 · Planned 8 · BTM 3 conf / 2 rpt`
 
 Over marketing fluff. Always disclose dataset scope on KPI sublines and methodology.
+
+---
+
+## Charts & ledger (added with the visual upgrade)
+
+- **Chart palette** (validated on `--bg-1` for lightness band, chroma, color-blind separation and contrast): `--chart-operating` #3b82f6, `--chart-pipeline` #d97706 (planned + under construction). Charts encode only these two phases; cancelled rows are excluded and the subtitle says so.
+- **Confidence ramp** (one hue, light = more certain, validated as ordinal): `--conf-confirmed` #dbe4ee, `--conf-reported` #7d8ea5, `--conf-estimated` #3d4b5e; unknown = empty cell with a hairline. Confidence badges use the same ramp, so blue/amber/green only ever mean status.
+- **Marks:** bars ≤ 24px (12px here) from one baseline, a 2px gap between segments, a 4px rounded data-end only; the value sits at the tip in text ink, never in the series color. Every chart has hover tooltips (`components/charts/ChartTooltip.tsx`) and a screen-reader table.
+- **Long tails:** never fold single-facility groups into an "Other" bar (it becomes the longest bar). List them in a note under the chart.
+- **Source ledger** (`components/Ledger.tsx`): facilities as columns, 8 key facts as rows. It is the site's signature visual. Keep it honest: a fact counts only with a real value and confidence above unknown.
+- **Motion budget:** panel fade-in, the ledger's one-time light-up on first scroll-in (skipped for reduced motion, with a fallback so data never stays hidden), and map marker transitions. The map's sqrt(MW) halo is static; still no glow pulses.

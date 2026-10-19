@@ -5,6 +5,10 @@ import KpiCell from "@/components/KpiCell";
 import { loadFacilities } from "@/lib/data";
 import { computeKpis } from "@/lib/kpis";
 import { USPS_STATES, STATE_NAMES } from "@/lib/states";
+import Ledger from "@/components/Ledger";
+import LocatorMap from "@/components/LocatorMap";
+import ChartTooltip from "@/components/charts/ChartTooltip";
+import { markerRadius, phaseColor } from "@/lib/rollups";
 
 const fmt = new Intl.NumberFormat("en-US");
 
@@ -79,44 +83,78 @@ export default async function StatePage({
             />
           </div>
 
-          <Panel title={`Facilities in ${usps}`}>
-            <table className="w-full text-[13px]">
-              <thead>
-                <tr className="border-b border-hairline text-left font-mono text-[10px] uppercase tracking-[0.1em] text-fg-dim">
-                  <th className="py-1.5 pr-2 font-medium">Facility</th>
-                  <th className="py-1.5 pr-2 font-medium">Status</th>
-                  <th className="py-1.5 pr-2 text-right font-medium">MW</th>
-                  <th className="py-1.5 font-medium">Type</th>
-                </tr>
-              </thead>
-              <tbody>
-                {facilities.map((f) => (
-                  <tr
-                    key={f.id}
-                    className="border-b border-hairline/50 transition-colors hover:bg-bg-2"
-                  >
-                    <td className="py-1.5 pr-2">
-                      <Link href={`/facilities/${f.id}`} className="hover:underline">
-                        {f.name}
-                      </Link>
-                    </td>
-                    <td className="py-1.5 pr-2 font-mono text-[11px] text-fg-muted">
-                      {f.status.replace("_", " ")}
-                    </td>
-                    <td className="py-1.5 pr-2 text-right font-mono tabular-nums">
-                      {typeof f.capacity.it_load_mw.value === "number" ? (
-                        fmt.format(f.capacity.it_load_mw.value)
-                      ) : (
-                        <span className="text-fg-dim">—</span>
-                      )}
-                    </td>
-                    <td className="py-1.5 font-mono text-[11px] text-fg-muted">
-                      {f.facility_type.replace("_", " ")}
-                    </td>
+          <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_320px]">
+            <Panel title={`Facilities in ${usps}`}>
+              <table className="w-full text-[13px]">
+                <thead>
+                  <tr className="border-b border-hairline text-left font-mono text-[10px] uppercase tracking-[0.1em] text-fg-dim">
+                    <th className="py-1.5 pr-2 font-medium">Facility</th>
+                    <th className="py-1.5 pr-2 font-medium">Status</th>
+                    <th className="py-1.5 pr-2 text-right font-medium">MW</th>
+                    <th className="py-1.5 font-medium">Type</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {facilities.map((f) => (
+                    <tr
+                      key={f.id}
+                      className="border-b border-hairline/50 transition-colors hover:bg-bg-2"
+                    >
+                      <td className="py-1.5 pr-2">
+                        <Link href={`/facilities/${f.id}`} className="hover:underline">
+                          {f.name}
+                        </Link>
+                      </td>
+                      <td className="py-1.5 pr-2 font-mono text-[11px] text-fg-muted">
+                        {f.status.replace("_", " ")}
+                      </td>
+                      <td className="py-1.5 pr-2 text-right font-mono tabular-nums">
+                        {typeof f.capacity.it_load_mw.value === "number" ? (
+                          fmt.format(f.capacity.it_load_mw.value)
+                        ) : (
+                          <span className="text-fg-dim">—</span>
+                        )}
+                      </td>
+                      <td className="py-1.5 font-mono text-[11px] text-fg-muted">
+                        {f.facility_type.replace("_", " ")}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </Panel>
+            <Panel title="Map">
+              <ChartTooltip>
+                <LocatorMap
+                  state={usps}
+                  width={300}
+                  height={230}
+                  label={`${facilities.length} facilities in ${STATE_NAMES[usps] ?? usps}`}
+                  points={facilities
+                    .filter(
+                      (f) =>
+                        typeof f.location.lat.value === "number" &&
+                        typeof f.location.lng.value === "number"
+                    )
+                    .map((f) => ({
+                      lat: f.location.lat.value as number,
+                      lng: f.location.lng.value as number,
+                      r: markerRadius(f.capacity.it_load_mw.value),
+                      color: phaseColor(f),
+                      label: `${f.name}\n${f.status.replace("_", " ")}${
+                        typeof f.capacity.it_load_mw.value === "number"
+                          ? ` · ${fmt.format(f.capacity.it_load_mw.value)} MW`
+                          : ""
+                      }`,
+                    }))}
+                />
+              </ChartTooltip>
+              <p className="mt-2 text-[11px] text-fg-dim">Dot area scales with known IT load.</p>
+            </Panel>
+          </div>
+
+          <Panel title="Source ledger">
+            <Ledger facilities={facilities} />
           </Panel>
         </>
       )}

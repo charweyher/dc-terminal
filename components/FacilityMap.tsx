@@ -54,11 +54,14 @@ export default function FacilityMap({
   heightClass = "h-[560px]",
   interactive = true,
   showCandidates = false,
+  cooperativeGestures = false,
 }: {
   points: MapPoint[];
   heightClass?: string;
   interactive?: boolean;
   showCandidates?: boolean;
+  /** Page-embedded maps: scroll passes through unless Ctrl/⌘ is held (two fingers on touch). */
+  cooperativeGestures?: boolean;
 }) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,6 +83,7 @@ export default function FacilityMap({
       maxBounds: MAX_BOUNDS,
       renderWorldCopies: false,
       interactive,
+      cooperativeGestures,
       attributionControl: { compact: true },
     });
     mapRef.current = map;
@@ -170,6 +174,34 @@ export default function FacilityMap({
       map.addSource("facilities", {
         type: "geojson",
         data: toGeoJson(pointsRef.current),
+      });
+      // Static soft halo under each curated marker, same √MW scale at ~2.4×: lets the big
+      // campuses read at national zoom. Not interactive and not animated.
+      map.addLayer({
+        id: "facility-halo",
+        type: "circle",
+        source: "facilities",
+        paint: {
+          "circle-radius": [
+            "interpolate",
+            ["linear"],
+            ["sqrt", ["coalesce", ["get", "mw"], 0]],
+            0, 9,
+            10, 14,
+            32, 30,
+            60, 52,
+          ],
+          "circle-color": [
+            "match",
+            ["get", "status"],
+            "operating", STATUS_COLORS.operating,
+            "planned", STATUS_COLORS.planned,
+            "under_construction", STATUS_COLORS.under_construction,
+            "#5c6b7e",
+          ],
+          "circle-opacity": 0.16,
+          "circle-blur": 0.85,
+        },
       });
       map.addLayer({
         id: "facility-circles",

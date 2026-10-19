@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Facility } from "@/lib/types";
+import { phaseOf } from "@/lib/rollups";
 
 const fmt = new Intl.NumberFormat("en-US");
 
@@ -27,13 +28,14 @@ export default function RankedFacilityTable({
       </div>
     );
   }
+  const max = Math.max(...facilities.map((f) => f.capacity.it_load_mw.value as number));
   return (
     <table className="w-full text-[13px]">
       <thead>
         <tr className="border-b border-hairline text-left font-mono text-[10px] uppercase tracking-[0.1em] text-fg-dim">
           <th className="py-1.5 pr-2 font-medium">Facility</th>
           <th className="py-1.5 pr-2 font-medium">State</th>
-          <th className="py-1.5 pr-2 text-right font-medium">MW</th>
+          <th className="w-[38%] py-1.5 pr-2 font-medium">MW</th>
           <th className="py-1.5 font-medium">Conf</th>
         </tr>
       </thead>
@@ -51,8 +53,20 @@ export default function RankedFacilityTable({
             <td className="py-1.5 pr-2 font-mono text-fg-muted">
               {f.location.state}
             </td>
-            <td className="py-1.5 pr-2 text-right font-mono tabular-nums">
-              {fmt.format(f.capacity.it_load_mw.value as number)}
+            <td className="py-1.5 pr-2">
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 flex-1">
+                  <div
+                    className={`h-full rounded-r-[4px] ${
+                      phaseOf(f) === "operating" ? "bg-chart-operating" : "bg-chart-pipeline"
+                    }`}
+                    style={{ width: `${((f.capacity.it_load_mw.value as number) / max) * 100}%` }}
+                  />
+                </div>
+                <span className="w-12 text-right font-mono tabular-nums">
+                  {fmt.format(f.capacity.it_load_mw.value as number)}
+                </span>
+              </div>
             </td>
             <td className="py-1.5 font-mono text-[10px] uppercase text-fg-dim">
               {f.capacity.it_load_mw.confidence.slice(0, 4)}

@@ -23,3 +23,6 @@ data/raw/**/*.csv
 *.png
 !app/**/*.png
 !public/**/*.png
+
+# TypeScript incremental build info
+*.tsbuildinfo

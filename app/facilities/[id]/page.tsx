@@ -2,7 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Panel from "@/components/Panel";
 import ConfidentField from "@/components/ConfidentField";
+import ConfidenceBadge from "@/components/ConfidenceBadge";
+import FactsMeter from "@/components/FactsMeter";
+import LocatorMap from "@/components/LocatorMap";
+import StatusStepper from "@/components/StatusStepper";
+import ChartTooltip from "@/components/charts/ChartTooltip";
 import { getSourceById, loadFacilities } from "@/lib/data";
+import { FACILITY_TYPE_LABEL, markerRadius, phaseColor } from "@/lib/rollups";
 
 const fmt = new Intl.NumberFormat("en-US");
 const mw = (v: unknown) => `${fmt.format(v as number)} MW`;
@@ -35,24 +41,76 @@ export default async function FacilityDetailPage({
     .map((sid) => getSourceById(sid))
     .filter((s) => s !== undefined);
 
+  const itLoad = f.capacity.it_load_mw;
+  const hasLoad = typeof itLoad.value === "number";
+  const place = [f.location.city, f.location.county && `${f.location.county} County`]
+    .filter(Boolean)
+    .join(", ");
+  const lat = f.location.lat.value;
+  const lng = f.location.lng.value;
+
   return (
     <div className="flex flex-col gap-3 pt-6">
-      <div className="flex flex-wrap items-baseline gap-3">
-        <h1 className="font-sans text-xl font-semibold tracking-wide">
-          {f.name}
-        </h1>
-        <span className="font-mono text-[12px] text-fg-muted">
-          {f.status.replace("_", " ")} · {f.facility_type.replace("_", " ")} ·{" "}
-          <Link href={`/states/${f.location.state.toLowerCase()}`} className="underline hover:text-fg">
-            {f.location.state}
-          </Link>
-        </span>
-      </div>
-      {f.aliases.length > 0 ? (
-        <div className="font-mono text-[11px] text-fg-dim">
-          aka {f.aliases.join(" · ")}
+      <section className="panel-in grid gap-4 rounded-[2px] border border-hairline bg-bg-1 p-4 md:grid-cols-[1fr_auto] md:p-5">
+        <div className="flex min-w-0 flex-col gap-3">
+          <div>
+            <h1 className="font-sans text-2xl font-semibold tracking-wide md:text-3xl">{f.name}</h1>
+            <p className="mt-1 text-[13px] text-fg-muted">
+              {FACILITY_TYPE_LABEL[f.facility_type]} in {place ? `${place}, ` : ""}
+              <Link
+                href={`/states/${f.location.state.toLowerCase()}`}
+                className="underline decoration-hairline-strong underline-offset-2 hover:text-fg"
+              >
+                {f.location.state}
+              </Link>
+              {f.operator ? <> · operated by {f.operator}</> : null}
+            </p>
+            {f.aliases.length > 0 ? (
+              <p className="mt-0.5 text-[12px] text-fg-dim">Also known as {f.aliases.join(", ")}</p>
+            ) : null}
+          </div>
+          <StatusStepper status={f.status} />
+          <div className="flex flex-wrap items-end gap-x-10 gap-y-4 pt-1">
+            <div>
+              <div className="text-[12px] text-fg-muted">IT load</div>
+              {hasLoad ? (
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-semibold leading-none text-fg">
+                    {fmt.format(itLoad.value as number)}
+                  </span>
+                  <span className="text-lg text-fg-muted">MW</span>
+                  <ConfidenceBadge confidence={itLoad.confidence} />
+                </div>
+              ) : (
+                <div className="text-2xl font-semibold leading-tight text-fg-dim">Not public</div>
+              )}
+            </div>
+            <ChartTooltip>
+              <FactsMeter facility={f} />
+            </ChartTooltip>
+          </div>
         </div>
-      ) : null}
+        {typeof lat === "number" && typeof lng === "number" ? (
+          <div className="w-full max-w-[260px] self-center justify-self-center md:w-[240px]">
+            <LocatorMap
+              state={f.location.state}
+              points={[
+                {
+                  lat,
+                  lng,
+                  r: markerRadius(itLoad.value),
+                  color: phaseColor(f),
+                  label: f.name,
+                },
+              ]}
+              label={`${f.name} location within ${f.location.state}`}
+            />
+            <p className="mt-1 text-center text-[11px] text-fg-dim">
+              Location precision: {f.location.precision}
+            </p>
+          </div>
+        ) : null}
+      </section>
 
       <div className="grid gap-3 md:grid-cols-2">
         <Panel title="Identity">

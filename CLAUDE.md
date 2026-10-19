@@ -126,4 +126,4 @@ Execute **one phase at a time** using the matching file in `prompts/`. Do not sk
 
 ## When expanding the dataset
 
-Follow `docs/DATA_PIPELINE.md`. Bump `data/meta.json` version and append to `CHANGELOG_DATA.md`. Prefer fewer high-quality, sourced rows over inventing a Cleanview-sized catalog.
+Follow `docs/DATA_PIPELINE.md`. Bump `data/meta.json` version and append to `CHANGELOG_DATA.md`, opening the release with a `> ` one-line plain-language summary (the home page's Data wire shows it; no IDs or coordinates in it). Prefer fewer high-quality, sourced rows over inventing a Cleanview-sized catalog.

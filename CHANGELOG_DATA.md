@@ -1,6 +1,10 @@
 # Data changelog
 
+Each release opens with a `> ` one-line summary in plain language; the site's Data wire shows it.
+
 ## 0.1.0 — 2026-07-18
+
+> First version of the dataset, source registry and national water context.
 
 - Initial `facilities.sample.json` (20 facilities) for schema + UI development.
 - Initial `sources.json` registry and `aggregates.water.json` national context estimates.
@@ -10,9 +14,13 @@
 
 ## 0.1.1 — 2026-07-18
 
+> Moved Meta Hyperion to its announced site in Richland Parish, Louisiana.
+
 - `meta-hyperion-la`: corrected location from Richland Parish county centroid to the publicly announced Holly Ridge / Franklin Farm mega-site (32.351, −91.674), precision `county` → `site`, confidence `estimated` → `reported`; new source `meta-hyperion-richland-press`.
 
 ## 0.2.0 — 2026-07-18
+
+> Added 8 operating facilities from OpenStreetMap and public records, including Google The Dalles with water data.
 
 - First curation batch from live ingest feeds (+8 operating facilities, 20 → 28 rows). Coordinates from OpenStreetMap (`osm-overpass-datacenters`, parcel precision); each row corroborated by a second public source:
   - `google-the-dalles-or` — with 2024 water records (1.263 MGD withdrawal / 0.99 MGD consumption) from The Oregonian public-records case.
@@ -25,6 +33,8 @@
 
 ## 0.3.0 — 2026-07-18
 
+> Replaced every synthetic test row with a real facility, including a confirmed behind-the-meter bitcoin site in New York.
+
 - **All synthetic rows removed** (`cancelled-demo-or`, `confirmed-btm-demo-ok`, `nebius-nj-btm-planned`) and replaced with real, sourced equivalents serving the same KPI roles:
   - `msft-licking-county-oh` — real cancellation (Microsoft's $1B New Albany/Heath/Hebron plan, April 2025); county precision.
   - `greenidge-dresden-ny` — real **confirmed** BTM: bitcoin mining inside an operator-owned 106 MW gas plant (SEC issuer filings + Title V permit + EIA plant); hybrid interconnect (sells excess to NYISO).
@@ -35,9 +45,13 @@
 
 ## 0.3.1 — 2026-07-18
 
+> Added Galaxy Digital Helios in Dickens County, Texas: a 133 MW AI campus serving CoreWeave.
+
 - Added `galaxy-helios-dickens-tx` (Galaxy Digital Helios, Dickens County TX): operating AI campus, 133 MW critical IT load delivered to CoreWeave (Phase I, July 2026 press release), ERCOT grid-supplied, formerly Argo Blockchain's Helios bitcoin mine (2022). Coordinates from OSM ("Argo Data Center" way/1490401523). Sources: Galaxy Phase I + ERCOT press releases, Texas A&M TRERC analysis. 44 → 45 facilities.
 
 ## 0.4.0 — 2026-10-18
+
+> Retired the last placeholder data: 17 records re-sourced or removed. Project Jupiter (Stargate New Mexico) is now under construction.
 
 - **Sample fixture fully retired.** The `sample-schema-fixture` source was still cited by 17 rows (5 "(sample)" rows plus fields on 12 others). Every fixture-cited field now cites a public source or is set to `unknown`/null. Fixture values were dropped instead of re-cited where no primary source supports them; several matched a commercial tracker's listings, not a primary document. Source entry removed. 45 → 43 facilities.
 - Sample rows:
@@ -57,6 +71,8 @@
 - 21 new sources; `sample-schema-fixture` and the now-uncited `equinix-sustainability-2025` removed. `facilities.json` wrapper description no longer calls the dataset a sample fixture.
 
 ## 0.4.1 — 2026-10-18
+
+> Corrected xAI Colossus 1's location in Memphis and merged Microsoft Fairwater Atlanta into one campus record.
 
 - `xai-colossus-1-tn`: **coordinates corrected** from a point ~17 km east (35.0456, −89.9711) to the OSM "xAI Colossus" building (way/1381264361, 35.05995, −90.15638), precision `parcel`. The OSM address tag (3231 Paul R. Lowry Road) matches MLGW's May 2025 utility update (former Electrolux plant, Frank C. Pidgeon Industrial Park) and Commercial Property Executive's May 2026 sale report.
   - The vague `xai-colossus-press` source (a publisher homepage) is retired. The 300 MW `it_load_mw` stays `reported` but now cites MLGW (150 MW energized, second 150 MW increment requested for 300 MW total), Tom's Hardware (May 2025) and WSMV (TVA approved another 150 MW, Feb 2026, site not named). Notes say it is grid electric service, not measured IT load.

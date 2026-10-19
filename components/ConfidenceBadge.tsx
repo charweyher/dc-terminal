@@ -7,10 +7,11 @@ const LABELS: Record<Confidence, string> = {
   unknown: "UNK",
 };
 
+// Same one-hue ramp as the ledger, so status colors (blue/amber/green) keep a single meaning.
 const COLORS: Record<Confidence, string> = {
-  confirmed: "text-btm border-btm/50",
-  reported: "text-operating border-operating/50",
-  estimated: "text-planned border-planned/50",
+  confirmed: "text-conf-confirmed border-conf-confirmed/70",
+  reported: "text-conf-reported border-conf-reported/70",
+  estimated: "text-fg-muted border-conf-estimated",
   unknown: "text-fg-dim border-hairline",
 };
 
