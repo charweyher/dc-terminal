@@ -36,3 +36,22 @@
 ## 0.3.1 — 2026-07-18
 
 - Added `galaxy-helios-dickens-tx` (Galaxy Digital Helios, Dickens County TX): operating AI campus, 133 MW critical IT load delivered to CoreWeave (Phase I, July 2026 press release), ERCOT grid-supplied, formerly Argo Blockchain's Helios bitcoin mine (2022). Coordinates from OSM ("Argo Data Center" way/1490401523). Sources: Galaxy Phase I + ERCOT press releases, Texas A&M TRERC analysis. 44 → 45 facilities.
+
+## 0.4.0 — 2026-10-18
+
+- **Sample fixture fully retired.** The `sample-schema-fixture` source was still cited by 17 rows (5 "(sample)" rows plus fields on 12 others). Every fixture-cited field now cites a public source or is set to `unknown`/null. Fixture values were dropped instead of re-cited where no primary source supports them; several matched a commercial tracker's listings, not a primary document. Source entry removed. 45 → 43 facilities.
+- Sample rows:
+  - `equinix-dc12-va` → **Equinix DC12 (Ashburn)**: OSM parcel coords; opened 2017 and indirect evaporative cooling (Equinix press release, confirmed). Illustrative water volumes removed, so water-known drops 3 → 2. MW not disclosed.
+  - `stargate-nm-planned` → `stargate-project-jupiter-nm`, **Project Jupiter (Stargate New Mexico)**, Santa Teresa, Doña Ana County: now `under_construction`. The 2,450 MW figure is Distilled's on-site power plant, so it moved from `it_load_mw` (now unknown) to `onsite_generation_mw`. BTM `reported`. Air permit stayed and gas pipeline denied (Sept 2026), recorded in notes.
+  - `vantage-quincy-wa` → **Vantage Quincy (WA1) campus**: 89 MW IT (confirmed); Grant County PUD grid; cooling corrected from evaporative to air (closed-loop air-cooled chillers per Vantage).
+  - `aws-us-east-oha-oh` **removed**: a regional aggregate, not a facility. AWS does not publish site locations, and no primary source pins a specific operating Ohio site.
+  - `qts-atlanta-campus-ga` **removed**: the only matching real site, QTS Fayetteville, is where AJC reporting places Microsoft Fairwater Atlanta, so a separate row would double-count the Fairwater rows.
+- Other rows with fixture-cited fields:
+  - `riot-rockdale-tx` (700 MW, operating 2020, ERCOT, immersion + air), `iren-childress-tx` (750 MW site power, ERCOT, air + liquid) and `hut8-king-mountain-tx` (280 MW, energized 2022) are now sourced from operator pages, filings and releases. Their MW figures are site power, not critical IT. King Mountain is now BTM `reported` (co-located wind, `hybrid`); GEM's doubts are disclosed in notes.
+  - `fermi-matador-tx`: TCEQ permit 181009 supports on-site gas for the campus, so BTM goes `reported` → `confirmed` with 6 GW on-site generation. IT load and expected year → unknown (Distilled had no Fermi figures). Coords moved to the permit's US-60 / FM-2373 location.
+  - `meta-hyperion-la` → **Meta Hyperion (Richland Parish)**: whole campus, now `under_construction`; ~2 GW by 2030 (CNBC), replacing the fixture's 5,238 MW / 2031; Entergy grid supply.
+  - `edgecore-mesa-ph03-az` → `edgecore-mesa-az` (campus; PH03 was not yet operating): 206 MW commissioned (EdgeCore, May 2025), SRP grid, air-cooled.
+  - `stream-phoenix-az`: location corrected to the Goodyear campus (OSM PHX-1); opened 2020; capacity unknown (280 MW unsourced).
+  - `digital-realty-iad39-va`, `msft-fairwater-atl-b2-ga`/`-b4-ga`: untraceable MW and opening year → unknown; IAD39 moved to OSM parcel coords; Fairwater rows add AJC's Fayetteville reporting.
+  - `google-council-bluffs-ia`: OSM parcel coords; fixture-only grid/BTM/cooling → unknown. `xai-colossus-1-tn`: fixture citation dropped (value kept on `xai-colossus-press`) and notes reworded.
+- 21 new sources; `sample-schema-fixture` and the now-uncited `equinix-sustainability-2025` removed. `facilities.json` wrapper description no longer calls the dataset a sample fixture.

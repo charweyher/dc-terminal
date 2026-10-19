@@ -101,24 +101,6 @@
       "kind": "government"
     },
     {
-      "id": "sample-schema-fixture",
-      "title": "DC Terminal sample fixture (synthetic/illustrative public-style rows)",
-      "publisher": "DC Terminal",
-      "url": null,
-      "accessed_at": "2026-07-18",
-      "license_notes": "Used only for UI/schema development. Several MW/coords are estimated or reported placeholders \u2014 replace before publishing analytics.",
-      "kind": "other"
-    },
-    {
-      "id": "equinix-sustainability-2025",
-      "title": "Equinix sustainability water withdrawal/consumption disclosures",
-      "publisher": "Equinix",
-      "url": "https://www.equinix.com/",
-      "accessed_at": "2026-07-18",
-      "license_notes": "Often global/regional; use facility-level only when site-named.",
-      "kind": "corporate"
-    },
-    {
       "id": "most-policy-dc-water",
       "title": "Data Center Water Use \u2014 science note",
       "publisher": "MOST Policy Initiative",
@@ -270,6 +252,195 @@
       "accessed_at": "2026-07-18",
       "license_notes": "Academic center analysis; history and capacity timeline.",
       "kind": "academic"
+    },
+    {
+      "id": "equinix-dc12-press",
+      "title": "Equinix Expands in Washington, D.C. Area with New Flagship Data Center (DC12, Ashburn) \u2014 Oct 26, 2017",
+      "publisher": "Equinix",
+      "url": "https://investor.equinix.com/news-events/press-releases/detail/252/equinix-expands-in-washington-d-c-area-with-new-flagship",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "vantage-quincy-wa1-press",
+      "title": "Vantage Data Centers Completes Development of 89MW, $1 Billion Quincy, Washington Campus \u2014 Oct 18, 2023",
+      "publisher": "Vantage Data Centers",
+      "url": "https://vantage-dc.com/news/vantage-data-centers-completes-development-of-89mw-1billion-quincy-washington-campus/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "project-jupiter-npr-2026",
+      "title": "Worries over water as a giant data center moves into the New Mexico desert (Project Jupiter, Santa Teresa) \u2014 Jun 14, 2026",
+      "publisher": "NPR (via KAXE)",
+      "url": "https://www.kaxe.org/news/2026-06-14/worries-over-water-as-a-giant-data-center-moves-into-the-new-mexico-desert",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "project-jupiter-abqj-permit-2026",
+      "title": "NM Supreme Court leaves Project Jupiter permit on hold \u2014 Sep 1, 2026",
+      "publisher": "Albuquerque Journal",
+      "url": "https://www.abqjournal.com/news/nm-supreme-court-leaves-project-jupiter-permit-on-hold/3113794",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "project-jupiter-irb-2025",
+      "title": "Do\u00f1a Ana County approves historic $165B bond for data center (Project Jupiter IRB) \u2014 Sep 2025",
+      "publisher": "Albuquerque Journal",
+      "url": "https://www.abqjournal.com/business/doa-ana-county-approves-historic-165b-bond-for-data-center/680373",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "ajc-fairwater-fayetteville",
+      "title": "Microsoft's newest AI 'superfactory' opens at sprawling Fayetteville campus \u2014 Nov 2025",
+      "publisher": "The Atlanta Journal-Constitution",
+      "url": "https://www.ajc.com/business/2025/11/microsofts-newest-ai-superfactory-opens-at-sprawling-fayetteville-campus/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "iren-childress-page",
+      "title": "IREN Childress data center campus \u2014 official site page (750 MW, ERCOT-connected)",
+      "publisher": "IREN",
+      "url": "https://iren.com/data-centers/childress",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "iren-horizon1-dcd",
+      "title": "IREN delivers first phase of AI capacity to Microsoft in Texas (Horizon 1, Childress)",
+      "publisher": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/iren-delivers-first-phase-of-ai-capacity-to-microsoft-in-texas/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "riot-rockdale-page",
+      "title": "Riot Platforms \u2014 Rockdale, Texas facility page (700 MW developed capacity)",
+      "publisher": "Riot Platforms",
+      "url": "https://www.riotplatforms.com/locations/rockdale/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "riot-10k-fy2025",
+      "title": "Riot Platforms, Inc. Form 10-K for fiscal year 2025 (Rockdale Facility, 700 MW developed capacity)",
+      "publisher": "U.S. SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926022322/riot-20251231x10k.htm",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "hut8-ops-july-2024",
+      "title": "Hut 8 Operations Update for July 2024 (site table: King Mountain, McCamey TX, 280 MW, King Mountain JV)",
+      "publisher": "Hut 8 Corp. (GlobeNewswire)",
+      "url": "https://www.globenewswire.com/news-release/2024/08/06/2924700/0/en/Hut-8-Operations-Update-for-July-2024.html",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "compute-north-king-mountain-2022",
+      "title": "Compute North Begins Energization of 280MW TIER 0 Data Center Co-located at Wind Farm in McCamey, Texas \u2014 Aug 8, 2022",
+      "publisher": "Compute North (Business Wire)",
+      "url": "https://www.businesswire.com/news/home/20220808005583/en/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "gem-compute-north-upton",
+      "title": "Compute North Upton County facility \u2014 Global Energy Monitor wiki profile",
+      "publisher": "Global Energy Monitor",
+      "url": "https://www.gem.wiki/Compute_North_Upton_County_facility",
+      "accessed_at": "2026-10-18",
+      "license_notes": "CC BY 4.0 (GEM wiki)",
+      "kind": "ngo"
+    },
+    {
+      "id": "meta-hyperion-cnbc-2026",
+      "title": "Meta's Louisiana data center investment to reach $50 billion (Hyperion: ~2 GW by 2030, 5 GW full build) \u2014 Jul 13, 2026",
+      "publisher": "CNBC",
+      "url": "https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "entergy-lpsc-meta-2025",
+      "title": "Entergy Louisiana receives LPSC approval for major infrastructure investments to support Meta's data center \u2014 Aug 20, 2025",
+      "publisher": "Entergy",
+      "url": "https://www.entergy.com/news/entergy-louisiana-receives-lpsc-approval-for-major-infrastructure-investments-to-support-metas-data-center-and-improve-reliability",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "hyperion-entergy-gas-2026",
+      "title": "Meta triples order of gas-fired power plants for its AI campus in Louisiana \u2014 Mar 30, 2026",
+      "publisher": "The Lens",
+      "url": "https://thelensnola.org/2026/03/30/meta-triples-order-of-gas-fired-power-plants-for-its-ai-campus-in-louisiana/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "fermi-tceq-permit-181009",
+      "title": "TCEQ Plain Language Summary \u2014 NSR Permit 181009 / PSDTX1670 / GHGPSDTX254, Fermi America Project Matador (Fermi Equipment Holdco, LLC)",
+      "publisher": "Texas Commission on Environmental Quality",
+      "url": "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/181009-pls-english.pdf",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "government"
+    },
+    {
+      "id": "fermi-6gw-permit-press",
+      "title": "Fermi America secures final 6GW Clean Air Permit from TCEQ for 11 GW private power grid \u2014 Feb 2026",
+      "publisher": "Fermi America (press release, via Finviz)",
+      "url": "https://finviz.com/news/322520/fermi-america-secures-final-6gw-clean-air-permit-from-the-texas-commission-on-environmental-quality-tceq-for-worlds-largest-11-gw-private-power-grid",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "fermi-tensorwave-2026",
+      "title": "Fermi America announces $6.5 billion contract with TensorWave (222 MW total facility power) \u2014 Aug 10, 2026",
+      "publisher": "KLTV",
+      "url": "https://www.kltv.com/2026/08/10/fermi-america-announces-65-billion-contract-with-tensorwave/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
+    },
+    {
+      "id": "edgecore-mesa-2025-press",
+      "title": "EdgeCore Digital Infrastructure Announces Expansion of Its Metro Phoenix Data Center Market to Over 450 MW \u2014 May 20, 2025",
+      "publisher": "EdgeCore Digital Infrastructure (ACCESS Newswire)",
+      "url": "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/edgecore-digital-infrastructure-announces-expansion-of-its-metro-1029711",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "corporate"
+    },
+    {
+      "id": "stream-phoenix-dcd-2020",
+      "title": "Stream Data Centers opens Phoenix I facility in Goodyear, Arizona (first of five buildings, 157-acre campus, up to 200 MW)",
+      "publisher": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/stream-data-centers-opens-phoenix-i-facility-goodyear-arizona/",
+      "accessed_at": "2026-10-18",
+      "license_notes": null,
+      "kind": "news"
     }
   ]
 }

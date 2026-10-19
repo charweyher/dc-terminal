@@ -115,4 +115,4 @@ All data lives in the curated `data/facilities.json` — every row is real and s
 
 ## Dataset scope disclaimer
 
-Figures reflect this repo's public curated inventory, **not** a complete national census — commercial trackers list far more projects, and the UI says so wherever totals appear. Sample rows include clearly labeled illustrative/synthetic entries for UI testing (see facility `notes`); replace or remove them before publishing analytics. Respect upstream licenses when citing government, corporate, and academic sources.
+Figures reflect this repo's public curated inventory, **not** a complete national census — commercial trackers list far more projects, and the UI says so wherever totals appear. Respect upstream licenses when citing government, corporate, and academic sources.
